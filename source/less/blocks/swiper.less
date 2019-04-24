@@ -2,3 +2,106 @@
     width: 100vw;
     height: 100vh;
 }
+
+.swiper-pagination-custom {
+    bottom: 6px;
+
+    width: auto;
+
+    font-size: 29px;
+    color: @menu-color;
+}
+
+.swiper-pagination-custom .swiper-pagination-current {
+    font-size: 46px;
+    color: #fff;
+}
+
+.swiper-pagination__custom-wrapper {
+    position: absolute;
+
+    left: 30px;
+    bottom: 45px;
+
+    width: 270px;
+    height: 50px;
+
+    z-index: 2;
+
+    &::before {
+        content: '';
+
+        display: block;
+        position: absolute;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 3px;
+
+        background-color: @menu-color;
+        z-index: 2;
+    }
+}
+
+.swiper-pagination-custom__label {
+    display: block;
+    position: absolute;
+
+    right: 0;
+    bottom: 10px;
+
+    width: auto;
+
+    font-size: 28px;
+    font-weight: 100;
+    letter-spacing: -2px;
+    color: @main-dark;
+
+    z-index: 2;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: auto;
+    bottom: 45px;
+
+    width: 57px;
+    height: 50px;
+
+    background-size: 100%;
+    background-image: url('../img/arrows-dark.png');
+
+    z-index: 2;
+}
+
+.swiper-button-prev {
+    left: 315px;
+    visibility: visible;
+    opacity: 1;
+
+    transition-property: visibility, opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    transform: rotate(180deg) scale(0.75);
+}
+
+.swiper-button-next {
+    left: 370px;
+
+    transition: transform 0.2s ease-in;
+
+    &--on-start {
+        transform: translateX(-50px);
+    }
+}
+
+.swiper-button-next--first-slide {
+    transform: translateX(-57px);
+}
+
+.swiper-button-prev.swiper-button-disabled {
+    visibility: hidden;
+    opacity: 0;
+}

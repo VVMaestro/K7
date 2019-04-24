@@ -10,11 +10,71 @@
 <body>
     <!-- Slider main container -->
     <div class="swiper-container">
+        <aside class="page__aside-panel">
+            <button class="main-nav__switch">
+                <span></span>
+            </button>
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a href="#">Главная</a></li>
+                    <li class="main-nav__item"><a href="#">Портфолио</a></li>
+                    <li class="main-nav__item"><a href="#">Услуги</a></li>
+                    <li class="main-nav__item"><a href="#">О нас</a></li>
+                    <li class="main-nav__item"><a href="#">Блог</a></li>
+                    <li class="main-nav__item"><a href="#">Контакты</a></li>
+                </ul>                
+            </nav>
+            <div class="main-nav__links">
+                <a href="#" class="main-nav__link">Бриф</a>
+                <a href="#" class="main-nav__link">Презентация</a>
+            </div>
+        </aside>
+        <div class="page__contacts">
+            <a href="mailto:k7@vayx.ru">k7@vayx.ru</a>
+            <p>Республика Карелия<br>
+                г.Петрозаводск ул. Ленина д.14</p>
+            <p>8 (981) 997-50-00</p>
+        </div>
+        <div class="page__dark-back">            
+        </div>
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-                <section class="first-page"></section>
+                <section class="first-page">
+                    <div class="first-page__logo">
+                        <img width="337" height="352" src="img/logotype.png">
+                    </div>
+                    <div class="language-button__wrapper">
+                            <label class="language-button">
+                                <input type="radio" name="lang" value="ru" class="language-button__input visually-hidden" checked></input>
+                                <span class="language-button__custom language-button__custom--ru language-button__custom--dark"></span>
+                            </label>
+                            <span class="language-button__line"></span>
+                            <label class="language-button">
+                                <input type="radio" name="lang" value="en" class="language-button__input visually-hidden"></input>
+                                <span class="language-button__custom language-button__custom--en language-button__custom--dark"></span>
+                            </label>
+                    </div>
+                    <a href="#" class="page__home page__home--dark"></a>
+                    <div class="social__wrapper">
+                        <a href="#" class="social social--dark social--inst"></a>
+                        <a href="#" class="social social--dark social--fb"></a>
+                        <a href="#" class="social social--dark social--vk"></a>
+                    </div>
+                    <div class="inner-swiper__container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide inner-swiper__slide">
+                                <p>Работают лучшие, заказывают успешные</p>
+                            </div>
+                            <div class="swiper-slide inner-swiper__slide">
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+                        <div class="inner-swiper__pagination"></div>
+                    </div>
+                    <a href="#" class="first-page__contacts">Контакты</a>
+                </section>
             </div>
             <div class="swiper-slide">
                 <section class="second-page"></section>
@@ -25,14 +85,14 @@
             ...
         </div>
         <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination__custom-wrapper">
+            <div class="swiper-pagination swiper-pagination-custom"></div>
+            <span class="swiper-pagination-custom__label">Прокрутить</span>
+        </div>
     
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+        <div class="swiper-button-next swiper-button-next--on-start"></div>
     </div>
 
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>

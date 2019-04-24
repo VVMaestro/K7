@@ -30,7 +30,7 @@ var paths = {
   images: {
     source: './source/**/img/*',
     dest: './build/img',
-    watch: ['./source/**/img/*']
+    watch: './source/**/img/*'
   },
   fonts: {
     source: './source/fonts/*',
