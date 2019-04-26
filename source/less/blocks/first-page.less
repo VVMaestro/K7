@@ -10,11 +10,27 @@
 .first-page__logo {
     position: absolute;
 
-    left: 308px;
+    left: 23%;
     top: 48px;
 
     width: 337px;
-    height: 352px;
+    height: auto;
+}
+
+.first-page__logo img {
+    display: block;
+}
+
+@media (max-width: @large-width), (max-height: 680px) {
+    .first-page__logo {
+        width: 220px;
+    }
+}
+
+@media (max-width: @medium-width) {
+    .first-page__logo {
+        width: 205px;
+    }
 }
 
 .first-page__contacts {
@@ -27,4 +43,11 @@
     text-transform: uppercase;
     text-decoration: none;
     color: @main-dark;
+}
+
+@media (max-width: @medium-width) {
+    .first-page__contacts {
+        right: 15px;
+        font-size: 16px;
+    }
 }

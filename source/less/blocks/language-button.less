@@ -1,16 +1,10 @@
-.language-button {
-    display: block;
-
-    cursor: pointer;
-}
-
 .language-button__wrapper {
     display: flex;
     position: absolute;
 
     justify-content: space-between;
 
-    right: 240px;
+    right: 18%;
     top: 48px;
 
     width: 125px;
@@ -30,7 +24,7 @@
     background-color: @main-dark;
 }
 
-.language-button .language-button__custom {
+.language-button {
     display: block;
 
     width: 30px;
@@ -41,42 +35,56 @@
     background-size: 20px 12px;
 }
 
-.language-button__custom--ru {
-    &.language-button__custom--dark {
+.language-button--ru {
+    &.language-button--dark {
         background-image: url('../img/ru-unfill.png');
     }
 
-    &.language-button__custom--light {
+    &.language-button--light {
         background-image: url('../img/ru-unfill-light.png');
     }
 }
 
-.language-button__custom--en {
-    &.language-button__custom--dark {
+.language-button--en {
+    &.language-button--dark {
         background-image: url('../img/en-unfill.png');
     }
 
-    &.language-button__custom--light {
+    &.language-button--light {
         background-image: url('../img/en-unfill-light.png');
     }
 }
 
-.language-button__input:checked + .language-button__custom--ru {
-    &.language-button__custom--dark {
+.language-button--fill.language-button--ru {
+    &.language-button--dark {
         background-image: url('../img/ru-fill.svg');
     }
 
-    &.language-button__custom--light {
+    &.language-button--light {
         background-image: url('../img/ru-fill-light.svg');
     }
 }
 
-.language-button__input:checked + .language-button__custom--en {
-    &.language-button__custom--dark {
+.language-button--fill.language-button--en {
+    &.language-button--dark {
         background-image: url('../img/en-fill.svg');
     }
 
-    &.language-button__custom--light {
+    &.language-button--light {
         background-image: url('../img/en-fill-light.svg');
+    }
+}
+
+@media (max-width: @medium-width) {
+    .language-button--en {
+        display: none;
+    }
+
+    .language-button__line {
+        display: none;
+    }
+
+    .language-button__wrapper {
+        width: 30px;
     }
 }

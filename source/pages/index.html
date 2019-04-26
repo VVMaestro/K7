@@ -10,10 +10,10 @@
 <body>
     <!-- Slider main container -->
     <div class="swiper-container">
-        <aside class="page__aside-panel">
-            <button class="main-nav__switch">
-                <span></span>
-            </button>
+        <button class="main-nav__switch">
+            <span></span>
+        </button>
+        <aside class="page__aside-panel">            
             <nav class="main-nav">
                 <ul class="main-nav__list">
                     <li class="main-nav__item"><a href="#">Главная</a></li>
@@ -29,6 +29,7 @@
                 <a href="#" class="main-nav__link">Презентация</a>
             </div>
         </aside>
+        <div class="page__small-logo page__small-logo--white"></div>
         <div class="page__contacts">
             <a href="mailto:k7@vayx.ru">k7@vayx.ru</a>
             <p>Республика Карелия<br>
@@ -42,19 +43,16 @@
             <!-- Slides -->
             <div class="swiper-slide">
                 <section class="first-page">
-                    <div class="first-page__logo">
-                        <img width="337" height="352" src="img/logotype.png">
-                    </div>
+                    <!-- <div > -->
+                        <picture class="first-page__logo">
+                            <source srcset="img/small-logotype-dark.png" media="(max-width: 820px)">
+                            <img width="337" height="352" src="img/logotype.png">
+                        </picture>
+                    <!-- </div> -->
                     <div class="language-button__wrapper">
-                            <label class="language-button">
-                                <input type="radio" name="lang" value="ru" class="language-button__input visually-hidden" checked></input>
-                                <span class="language-button__custom language-button__custom--ru language-button__custom--dark"></span>
-                            </label>
+                            <a href="#" class="language-button language-button--fill language-button--ru language-button--dark"></a>
                             <span class="language-button__line"></span>
-                            <label class="language-button">
-                                <input type="radio" name="lang" value="en" class="language-button__input visually-hidden"></input>
-                                <span class="language-button__custom language-button__custom--en language-button__custom--dark"></span>
-                            </label>
+                            <a href="#" class="language-button language-button--en language-button--dark"></a>
                     </div>
                     <a href="#" class="page__home page__home--dark"></a>
                     <div class="social__wrapper">

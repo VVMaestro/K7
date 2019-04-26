@@ -14,22 +14,6 @@
     transition-timing-function: ease-in-out;
 }
 
-//open menu logic
-.main-nav--open .main-nav {
-    visibility: visible; 
-    opacity: 1;
-    transform: translateX(0px);
-}
-
-.main-nav--open.page__aside-panel {
-    width: 406px;
-    z-index: 3;
-}
-
-.main-nav--open ~ .page__dark-back {
-    display: block;
-}
-
 .main-nav__list {
     margin: 0;
     padding: 0;
@@ -54,20 +38,25 @@
 .main-nav__switch {
     position: absolute;
     left: 30px;
-    top: 56px;
+    top: 48px;
 
-    height: 30px;
+    height: 22px;
     width: 50px;
 
     cursor: pointer;
 
     border: none;
     background-color: transparent;
+
+    z-index: 4;
 }
 
 .main-nav__switch span {
     display: block;
-    position: absolute;    
+    position: absolute;   
+    
+    left: 0;
+    top: 7px;
 
     height: 3px;
     width: 35px;
@@ -106,6 +95,21 @@
     }
 }
 
+@media (max-width: @medium-width) {
+    .main-nav__switch {
+        left: 15px;
+    }
+
+    .main-nav__switch span {
+        background-color: @main-dark;
+
+        &::before,
+        &::after {
+            background-color: @main-dark;
+        }
+    }
+}
+
 .main-nav__links {
     position: absolute;
     visibility: hidden;
@@ -125,30 +129,6 @@
     transition-property: transform visibility opacity;
     transition-duration: 1s;
     transition-timing-function: ease-in-out;
-}
-
-//switcher render changing
-.main-nav--open .main-nav__switch span::after {
-    opacity: 0;
-}
-
-.main-nav--open .main-nav__switch span {
-    transform: rotate(45deg);
-}
-
-.main-nav--open .main-nav__switch span::before {
-    width: 35px;
-    transform: rotate(90deg) translate(6px);
-}
-
-.main-nav--open .main-nav__links {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0px);
-}
-
-.main-nav--open ~ .page__contacts {
-    display: block;
 }
 
 .main-nav__link {
@@ -179,3 +159,65 @@
         background-color: @menu-color;
     }
 }
+
+//Open menu logic
+.main-nav--open .main-nav {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.main-nav--open .page__aside-panel {
+    width: 406px;
+    z-index: 3;
+}
+
+.main-nav--open .page__dark-back {
+    display: block;
+}
+
+.main-nav--open .page__contacts {
+    display: block;
+}
+
+//switcher render changing
+.main-nav--open .main-nav__switch span::after {
+    opacity: 0;
+}
+
+.main-nav--open .main-nav__switch span {
+    transform: rotate(45deg);
+}
+
+.main-nav--open .main-nav__switch span::before {
+    width: 35px;
+    transform: rotate(90deg) translate(6px);
+}
+
+.main-nav--open .main-nav__links {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+@media (max-width: @medium-width) {
+    .main-nav--open .main-nav__switch span {
+        background-color: #fff;
+
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    .main-nav--open .page__contacts {
+        display: none;
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .main-nav--open .page__aside-panel {
+        width: 100%;
+    }
+}
+//End of open menu logic

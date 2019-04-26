@@ -2,17 +2,38 @@
     position: absolute;
 
     left: calc(50% - 700px/2);
-    bottom: 280px;
+    bottom: 24%;
 
     width: 700px;
     height: auto;
+    min-height: 52px;
+
+    font-size: 34px;
 
     overflow: hidden;
 }
 
+@media (max-width: @large-width) {
+    .inner-swiper__container {
+        left: calc(50% - 450px/2);
+        width: 450px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: @medium-width) {
+    .inner-swiper__container {
+        left: calc(50% - 350px/2);
+        bottom: 44%;
+
+        width: 350px;
+        
+        font-size: 18px;
+    }
+}
+
 .inner-swiper__slide p {
     margin: 0;
-    font-size: 34px;
 }
 
 .inner-swiper__pagination.swiper-pagination-bullets {

@@ -60,18 +60,26 @@ var innerSwiper = new Swiper ('.inner-swiper__container', {
 
 //Init main-nav switcher
 const switcher = document.querySelector('.main-nav__switch');
-const asidePanel = document.querySelector('.page__aside-panel');
+const container = document.querySelector('.swiper-container');
 
 function onSwitcherClick () {
-    asidePanel.classList.toggle('main-nav--open');
+    container.classList.toggle('main-nav--open');
 }
 
 switcher.addEventListener('click', onSwitcherClick);
 
-//Init aside panel
+//Init aside panel and small-logo
 mainSwiper.on('slideChange', function () {
     const asidePanel = document.querySelector('.page__aside-panel');
     if (mainSwiper.isBeginning || mainSwiper.isEnd) {
         asidePanel.classList.remove('page__aside-panel--big');
     } else asidePanel.classList.add('page__aside-panel--big');
+});
+
+mainSwiper.on('slideChange', function () {
+    const pagesWithLogo = [1, 2];
+    const logo = document.querySelector('.page__small-logo');
+    if (pagesWithLogo.includes(mainSwiper.activeIndex)) {
+        logo.classList.add('page__small-logo--show');
+    } else logo.classList.remove('page__small-logo--show');
 });
