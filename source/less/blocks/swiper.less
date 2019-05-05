@@ -1,4 +1,4 @@
-.swiper-container {
+.swiper-container__custom {
     width: 100vw;
     height: 100vh;
 }
@@ -15,6 +15,8 @@
 .swiper-pagination-custom .swiper-pagination-current {
     font-size: 46px;
     color: #fff;
+
+    transition: all 0.5s ease-out;
 }
 
 @media (max-width: @medium-width) {
@@ -25,6 +27,10 @@
     .swiper-pagination-custom .swiper-pagination-current {
         font-size: 23px;
         color: @main-dark;
+    }
+
+    .swiper-pagination-custom--light .swiper-pagination-current {
+        color: #fff;
     }
 }
 
@@ -63,6 +69,12 @@
     }
 }
 
+@media (max-width: @xmobile-width) {
+    .swiper-pagination__custom-wrapper {
+        bottom: 20px;
+    }
+}
+
 .swiper-pagination-custom__label {
     display: block;
     position: absolute;
@@ -78,6 +90,11 @@
     color: @main-dark;
 
     z-index: 2;
+    transition: all 0.3s ease-in;
+}
+
+.swiper-pagination-custom__label--white {
+    color: #fff;
 }
 
 @media (max-width: @medium-width) {
@@ -101,6 +118,12 @@
     background-image: url('../img/arrows-dark.png');
 
     z-index: 2;
+    transition: all 0.3s ease-in;
+}
+
+.swiper-button-next--white,
+.swiper-button-prev--white {
+    background-image: url('../img/arrows.png');
 }
 
 .swiper-button-prev {
@@ -117,16 +140,10 @@
 .swiper-button-next {
     left: 370px;
 
-    transition: transform 0.2s ease-in;
-
     &--on-start {
         transform: translateX(-50px);
     }
 }
-
-// .swiper-button-next--first-slide {
-//     transform: translateX(-57px);
-// }
 
 .swiper-button-prev.swiper-button-disabled {
     visibility: hidden;
@@ -150,5 +167,12 @@
         &--on-start {
             transform: translateX(-30px);
         }
+    }
+}
+
+@media (max-width: @xmobile-width) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        bottom: 20px;
     }
 }

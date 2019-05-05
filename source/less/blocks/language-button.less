@@ -11,6 +11,12 @@
     height: auto;
 }
 
+@media(max-width: @medium-width) {
+    .language-button__wrapper {
+        top: 25px;
+    }
+}
+
 .language-button__line {
     display: block;
     position: absolute;
@@ -22,6 +28,10 @@
     height: 1px;
 
     background-color: @main-dark;
+
+    &--light {
+        background-color: #fff;
+    }
 }
 
 .language-button {
@@ -61,7 +71,7 @@
     }
 
     &.language-button--light {
-        background-image: url('../img/ru-fill-light.svg');
+        background-image: url('../img/ru-fill-light.png');
     }
 }
 
@@ -71,7 +81,7 @@
     }
 
     &.language-button--light {
-        background-image: url('../img/en-fill-light.svg');
+        background-image: url('../img/en-fill-light.png');
     }
 }
 

@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- Slider main container -->
-    <div class="swiper-container">
+    <div class="swiper-container swiper-container__custom">
         <button class="main-nav__switch">
             <span></span>
         </button>
@@ -36,19 +36,106 @@
                 г.Петрозаводск ул. Ленина д.14</p>
             <p>8 (981) 997-50-00</p>
         </div>
-        <div class="page__dark-back">            
+        <div class="page__dark-back"></div>
+        <div class="second-page__intro">
+            <p class="second-page__title">Вдохновляем</p>
+            <div class="second-page__more">
+                <button class="second-page__plus-button"></button>
+                <span>Подробнее</span>
+            </div>            
+        </div>
+
+        <div class="more-info second-page__more-info">
+            <div class="more-info__wrapper">
+                <div class="more-info__colums">
+                    <button class="more-info__close-button"></button>
+                    <span class="more-info__title">Вдохновляем</span>
+                    <a href="#" class="more-info__open-link">Открыть страницу</a>
+                </div>
+                <div class="info-swiper__container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="more-info__list-title">Нарисуем креативно</p>
+                            <ul class="more-info__list">
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Комикс</a>
+                                    - авторский или для бизнеса
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Веб дизайн</a>
+                                    - многостраничного сайта или лендинга
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Логотип</a>
+                                    - обновим или нарисуем новый
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="more-info__list-title">Нарисуем креативно</p>
+                            <ul class="more-info__list">
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Комикс</a>
+                                    - авторский или для бизнеса
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Веб дизайн</a>
+                                    - многостраничного сайта или лендинга
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Логотип</a>
+                                    - обновим или нарисуем новый
+                                </li>
+                            </ul>                        
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="more-info__list-title">Нарисуем креативно</p>
+                            <ul class="more-info__list">
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Комикс</a>
+                                    - авторский или для бизнеса
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Веб дизайн</a>
+                                    - многостраничного сайта или лендинга
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Логотип</a>
+                                    - обновим или нарисуем новый
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper-slide">
+                            <p class="more-info__list-title">Нарисуем креативно</p>
+                            <ul class="more-info__list">
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Комикс</a>
+                                    - авторский или для бизнеса
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Веб дизайн</a>
+                                    - многостраничного сайта или лендинга
+                                </li>
+                                <li class="more-info__item">
+                                    <a href="#" class="more-info__link">Логотип</a>
+                                    - обновим или нарисуем новый
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-swiper__pagination"></div>
+                </div>
+            </div>
         </div>
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
                 <section class="first-page">
-                    <!-- <div > -->
-                        <picture class="first-page__logo">
-                            <source srcset="img/small-logotype-dark.png" media="(max-width: 820px)">
-                            <img width="337" height="352" src="img/logotype.png">
-                        </picture>
-                    <!-- </div> -->
+                    <picture class="first-page__logo">
+                        <source srcset="img/small-logotype-dark.png" media="(max-width: 820px)">
+                        <img width="337" height="352" src="img/logotype.png">
+                    </picture>
                     <div class="language-button__wrapper">
                             <a href="#" class="language-button language-button--fill language-button--ru language-button--dark"></a>
                             <span class="language-button__line"></span>
@@ -64,23 +151,83 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide inner-swiper__slide">
                                 <p>Работают лучшие, заказывают успешные</p>
+                                <a href="#" class="inner-swiper__link">Как мы работаем</a> 
                             </div>
                             <div class="swiper-slide inner-swiper__slide">
-                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <p>Правильное решение для вашего бизнеса</p>
                             </div>
                         </div>
                         <div class="inner-swiper__pagination"></div>
                     </div>
-                    <a href="#" class="first-page__contacts">Контакты</a>
+                    <a href="#" class="page__contacts-link">Связаться</a>
                 </section>
             </div>
             <div class="swiper-slide">
-                <section class="second-page"></section>
+                <section class="second-page">
+                    <div class="language-button__wrapper">
+                        <a href="#" class="language-button language-button--fill language-button--ru language-button--light"></a>
+                        <span class="language-button__line language-button__line--light"></span>
+                        <a href="#" class="language-button language-button--en language-button--light"></a>
+                    </div>
+                    <a href="#" class="page__home page__home--light"></a>
+                    <div class="social__wrapper">
+                        <a href="#" class="social social--light social--inst"></a>
+                        <a href="#" class="social social--light social--fb"></a>
+                        <a href="#" class="social social--light social--vk"></a>
+                    </div>
+                    <a href="#" class="page__contacts-link  page__contacts-link--light">Связаться</a>
+                </section>
             </div>
             <div class="swiper-slide">
-                <section class="third-page"></section>
+                <section class="third-page">
+                    <picture class="third-page__logo">
+                        <source srcset="img/small-logotype-dark.png" media="(max-width: 960px)">
+                        <img width="337" height="352" src="img/logotype.png">
+                    </picture>
+                    <div class="language-button__wrapper">
+                        <a href="#" class="language-button language-button--fill language-button--ru language-button--dark"></a>
+                        <span class="language-button__line"></span>
+                        <a href="#" class="language-button language-button--en language-button--dark"></a>
+                    </div>
+                    <a href="#" class="page__home page__home--dark"></a>
+                    <div class="social__wrapper">
+                        <a href="#" class="social social--dark social--inst"></a>
+                        <a href="#" class="social social--dark social--fb"></a>
+                        <a href="#" class="social social--dark social--vk"></a>
+                    </div>
+                    <div class="third-page__contacts">
+                        <div class="contact contact--adress">
+                            <span class="contact__name">Адрес</span>
+                            <span class="contact__data">Петрозаводск, ул. Ленина д.14</span>
+                        </div>
+                        <div class="contact contact--phone">
+                            <span class="contact__name">Телефон</span>
+                            <span class="contact__data">8 (981) 997-50-00</span>
+                        </div>
+                    </div>
+                    <div class="third-page__right-column">
+                        <h1 class="third-page__title">Связаться</h1>
+                        <span class="third-page__text">Напишите нам 
+                            <a href="#" class="third-page__contact-link">k7@vayx.ru</a>
+                        </span>
+                        <form id="contacts-form" action="#" method="POST">
+                            <div class="third-page__form-wrapper">
+                                <select class="form__select" name="service" id="">
+                                    <option value="default" selected>Выберите услугу</option>
+                                </select>
+                                <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+                                <input class="form__input" type="email" name="email" placeholder="Ваш email">
+                                <input class="form__input" type="tel" name="tel" placeholder="Ваш телефон">
+                                <textarea class="form__textarea" name="message" placeholder="Введите ваше сообщение"></textarea>
+                            </div>
+                            <span class="form__text">Нажимая на кнопку «Отправить», 
+                                <a href="#" class="form__link">я даю согласие на обработку персональных данных</a>
+                            </span>
+                            <input class="form__submit" type="submit">
+                        </form>
+                    </div>
+                </section>
             </div>
-            ...
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination__custom-wrapper">
@@ -91,6 +238,11 @@
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next swiper-button-next--on-start"></div>
+    </div>
+
+    <div class="contacts-popup">
+        <button class="contacts-popup__close"></button>
+        <span class="contacts-popup__message">Совсем скоро наш менеджер ответит вам</span>
     </div>
 
     <script type="text/javascript" src="js/swiper/swiper.min.js"></script>
