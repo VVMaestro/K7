@@ -185,3 +185,26 @@ contactLinks.forEach(function(it) {
         mainSwiper.slideTo(CONTACTS__INDEX);
     });
 });
+
+//scrolling fix of form text area
+const textArea = document.querySelector('.form__textarea');
+
+textArea.addEventListener('wheel', function (evt) {
+    evt.stopPropagation();
+});
+
+//init language buttons logic
+const activeButtons = document.querySelectorAll('.language-button--active');
+const unactiveButtons = document.querySelectorAll('.language-button--unactive');
+const MEDIUM_WIDTH = 820;
+
+activeButtons.forEach(function(it) {
+    it.addEventListener('click', function (evt) {
+        if (document.documentElement.clientWidth <= MEDIUM_WIDTH) {
+            evt.preventDefault();
+            unactiveButtons.forEach(function (it) {
+                it.classList.toggle('language-button--unactive-open');
+            });
+        }
+    });
+});
