@@ -9,7 +9,6 @@
     min-height: 52px;
 
     font-size: 34px;
-    text-align: center;
 
     overflow: hidden;
 }
@@ -70,8 +69,8 @@
 .inner-swiper__link {
     display: block;
 
-    text-align: center;
-    font-size: 20px;
+    text-align: left;
+    font-size: 17px;
     color: @main-dark;
     font-weight: 100;
 }
@@ -79,5 +78,15 @@
 @media (max-width: @medium-width) {
     .inner-swiper__link {
         font-size: 14px;
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .inner-swiper__container {
+        text-align: center;
+    }
+
+    .inner-swiper__link {
+        text-align: center;
     }
 }

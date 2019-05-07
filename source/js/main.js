@@ -174,3 +174,14 @@ closePopup.addEventListener('click', function () {
     popup.classList.remove('contacts-popup--open');
     darkBack.classList.remove('page__dark-back--open');    
 });
+
+//init contact-links
+const contactLinks = document.querySelectorAll('.page__contacts-link');
+const CONTACTS__INDEX = 2;
+
+contactLinks.forEach(function(it) {
+    it.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        mainSwiper.slideTo(CONTACTS__INDEX);
+    });
+});
