@@ -10,13 +10,14 @@
     transform: translateX(-220px);
 
     transition-property: visibility, opacity, transform;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
 @media (max-width: @mobile-width) {
     .main-nav {
         left: calc(50% - 220px/2);
+        top: 100px;
 
         width: 220px;
     }
@@ -40,6 +41,15 @@
 
     &:hover, &:focus {
         color: @active-word;
+    }
+}
+
+@media(max-width: @mobile-width) {
+    .main-nav__item {
+        margin-bottom: 5px;
+    }
+    .main-nav__item a {
+        font-size: 22px;
     }
 }
 
@@ -146,7 +156,7 @@
     transform: translateX(-220px);
 
     transition-property: transform visibility opacity;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
@@ -202,7 +212,9 @@
 }
 
 .main-nav--open .second-page__intro {
-    display: none;
+    transform: translateX(400px);
+    visibility: hidden;
+    opacity: 0;
 }
 
 .main-nav--open .page__contacts {

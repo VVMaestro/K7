@@ -97,13 +97,15 @@
         height: 30px;
 
         border-radius: 3px;
-        box-shadow: 0 0 3px 2px rgba(200, 200, 200, 0.800);
+        box-shadow: 0 0 4px 3px rgba(200, 200, 200, 0.800);
         background-color: #fff;
 
         opacity: 0;
         transform: translateY(-30px);
 
         transition: all 0.1s ease-in;
+
+        z-index: 10;
 
         &::before {
             content: '';
@@ -117,7 +119,7 @@
             width: 10px;
             height: 10px;
 
-            box-shadow: -3px -3px 3px 0px rgba(200, 200, 200, 0.800);
+            box-shadow: -3px -3px 4px 0px rgba(200, 200, 200, 0.800);
             background-color: #fff;
 
             transform: rotate(45deg);

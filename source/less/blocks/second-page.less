@@ -1,19 +1,26 @@
 .second-page {
-    padding-left: 175px;
-
     width: 100%;
     height: 100vh;
 
     background-color: @main-dark;
-    background-image: url('../img/second-pageback.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 0;
-}
 
-@media (max-width: @medium-width) {
-    .second-page {
-        background-position: 59% 0;
+    &::before {
+        content: '';
+
+        display: block;
+        position: absolute;
+
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+
+        background-image: url('../img/second-pageback.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 0;
+
+        filter: brightness(65%);
     }
 }
 
@@ -44,17 +51,16 @@
     margin: 0;
 
     font-size: 180px;
-    line-height: 200px;
     letter-spacing: -2px;
 }
 
 @media (max-width: @large-width) {
     .second-page__intro {
         left: 80px;
-        bottom: calc(50vh - 210px/2);
+        bottom: calc(50vh - 170px/2);
 
         width: 660px;
-        height: 210px;
+        height: 170px;
     }
 
     .second-page__title {
@@ -65,10 +71,10 @@
 @media (max-width: @medium-width) {
     .second-page__intro {
         left: calc(50% - 380px/2);
-        bottom: calc(50vh - 190px/2);
+        bottom: calc(50vh - 120px/2);
 
         width: 380px;
-        height: 190px;
+        height: 120px;
     }
 
     .second-page__title {
@@ -79,10 +85,10 @@
 @media (max-width: @xmobile-width) {
     .second-page__intro {
         left: calc(50% - 240px/2);
-        bottom: calc(50vh - 240px/2);
+        bottom: calc(50vh - 100px/2);
 
         width: 240px;
-        height: 180px;
+        height: 100px;
     }
 
     .second-page__title {
@@ -108,13 +114,6 @@
     font-weight: 400;
     letter-spacing: -1px;
 }
-
-// .second-page__more-info {
-//     position: absolute;
-
-//     left: 0px;
-//     bottom: -60px;
-// }
 
 .second-page__plus-button {
     position: relative;

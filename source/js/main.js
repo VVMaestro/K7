@@ -193,7 +193,7 @@ textArea.addEventListener('wheel', function (evt) {
     evt.stopPropagation();
 });
 
-//init language buttons logic
+//init language buttons open logic
 const activeButtons = document.querySelectorAll('.language-button--active');
 const unactiveButtons = document.querySelectorAll('.language-button--unactive');
 const MEDIUM_WIDTH = 820;
@@ -207,4 +207,12 @@ activeButtons.forEach(function(it) {
             });
         }
     });
+});
+
+//init mobile contacts open logic
+const contactsOpenButton = document.querySelector('.mobile-contacts__button');
+const contactsBox = document.querySelector('.mobile-contacts');
+
+contactsOpenButton.addEventListener('click', function () {
+    contactsBox.classList.toggle('mobile-contacts--open');
 });

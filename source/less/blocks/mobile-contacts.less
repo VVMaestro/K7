@@ -1,0 +1,88 @@
+.mobile-contacts__list {
+    position: absolute;
+    visibility: hidden;
+
+    left: 0;
+    top: calc(100% + 10px);
+
+    margin: 0;
+    padding: 0;
+    width: 85vw;
+    height: 0;
+    
+    list-style: none;
+    background-color: #fff;
+
+    overflow: scroll;
+
+    transition: all 0.3s ease-in;
+}
+
+.mobile-contacts--open .mobile-contacts__list {
+    visibility: visible;
+    height: 420px;
+}
+
+.mobile-contacts__item {
+    &:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+.mobile-contacts__button {
+    display: block;
+    position: relative;
+
+    padding-left: 0;
+    padding-right: 30px;
+
+    font-family: 'KelsonSans',
+    Arial,
+    sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+    color: @main-dark;
+
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+
+        display: block;
+        position: absolute;
+        visibility: hidden;
+
+        right: 0;
+        top: calc(50% - 2px/2);
+
+        width: 20px;
+        height: 2px;
+
+        background-color: @main-dark;
+        opacity: 0;
+
+        transition: all 0.3s ease-in-out;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.mobile-contacts--open .mobile-contacts__button {
+    
+    &::before,
+    &::after {
+        visibility: visible;
+        opacity: 1;
+    }
+}
