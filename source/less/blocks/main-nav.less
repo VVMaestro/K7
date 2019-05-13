@@ -54,10 +54,6 @@
 }
 
 .main-nav__switch {
-    position: absolute;
-    left: 30px;
-    top: 48px;
-
     height: 22px;
     width: 50px;
 
@@ -114,12 +110,15 @@
     }
 }
 
-@media (max-width: @medium-width) {
-    .main-nav__switch {
-        left: 15px;
-        top: 25px;
-    }
+.main-nav__switch--zero-w span {
+    background-color: @main-dark;
 
+    &::before, &::after {
+        background-color: @main-dark;
+    }
+}
+
+@media (max-width: @medium-width) {
     .main-nav__switch span {
         background-color: @main-dark;
 
@@ -219,6 +218,14 @@
 
 .main-nav--open .page__contacts {
     display: block;
+}
+
+.main-nav--open .main-nav__switch--zero-w span {
+    background-color: #fff;
+
+    &::before, &::after {
+        background-color: #fff;
+    }
 }
 
 //switcher render changing
