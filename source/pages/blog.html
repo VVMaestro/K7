@@ -7,9 +7,24 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body class="main-nav__container">
-    <button class="main-nav__switch main-nav__switch--zero-w">
-        <span></span>
-    </button>
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header__colums">
+                <button class="main-nav__switch main-nav__switch--zero-w page-header__switch">
+                    <span></span>
+                </button>
+                <div class="page-header__logo">
+                    <img src="img/small-logotype-dark.png">
+                </div>
+                <div class="language-button__wrapper page-header__language-button">
+                    <a href="#" class="language-button language-button--ru language-button--dark language-button--active"></a>
+                    <span class="language-button__line"></span>
+                    <a href="#" class="language-button language-button--en language-button--dark language-button--unactive"></a>
+                </div>
+                <a href="#" class="home-button home-button--dark page-header__home-button"></a>
+            </div>
+        </div>
+    </header>
     <aside class="page__aside-panel page__aside-panel--zero-w">
         <nav class="main-nav">
             <ul class="main-nav__list">
@@ -26,6 +41,65 @@
             <a href="#" class="main-nav__link">Презентация</a>
         </div>
     </aside>
+
+    <main>
+        <section>
+            <div class="container">
+                <div class="main-title__colums">
+                    <h1 class="main-title">Блог креативной студии</h1>
+                    <div class="main-title__picture"></div>
+                </div>
+                <div class="news__list">
+                    <a href="#" class="news__item news__item--big">
+                        <div class="news__picture">
+                            <img src="img/news-back-big.jpg" width='410' height="250">
+                        </div>
+                        <div class="news__card">
+                            <p class="news__text">Как мы автоматизировали согласование заявок сотрудников для
+                                российского банка</p>
+                            <span class="news__date">29 аперля 2019</span>
+                        </div>
+                    </a>
+                    <a href="#" class="news__item">
+                        <div class="news__picture">
+                            <img src="img/news-back.jpg" width='410' height="250">
+                        </div>
+                        <div class="news__card">
+                            <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
+                            <span class="news__date">29 аперля 2019</span>
+                        </div>
+                    </a>
+                    <a href="#" class="news__item">
+                        <div class="news__picture">
+                            <img src="img/news-back.jpg" width='410' height="250">
+                        </div>
+                        <div class="news__card">
+                            <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
+                            <span class="news__date">29 аперля 2019</span>
+                        </div>
+                    </a>
+                    <a href="#" class="news__item">
+                        <div class="news__picture">
+                            <img src="img/news-back.jpg" width='410' height="250">
+                        </div>
+                        <div class="news__card">
+                            <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
+                            <span class="news__date">29 аперля 2019</span>
+                        </div>
+                    </a>
+                    <a href="#" class="news__item">
+                        <div class="news__picture">
+                            <img src="img/news-back.jpg" width='410' height="250">
+                        </div>
+                        <div class="news__card">
+                            <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
+                            <span class="news__date">29 аперля 2019</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script type="text/javascript" src="js/main-nav.js"></script>    
 </body>
