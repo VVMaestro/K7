@@ -32,7 +32,7 @@
 
 .page__dark-back {
     display: none;
-    position: absolute;
+    position: fixed;
 
     left: 0;
     right: 0;
@@ -129,7 +129,7 @@
 
 .page__contacts {
     display: none;
-    position: absolute;
+    position: fixed;
 
     right: 22%;
     top: 170px;
@@ -147,8 +147,12 @@
 
 @media (max-width: @large-width) {
     .page__contacts {
-        right: 5%;
-        font-size: 22px;
+        top: 250px;
+        right: calc(25% - 400px/2);
+
+        width: 400px;
+
+        font-size: 24px;
     }
 }
 

@@ -1,0 +1,38 @@
+.page-footer {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.page-footer__colums {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 0 75px;
+
+    min-height: 100px;
+}
+
+@media (max-width: @large-width) {
+    .page-footer__colums {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: @xmedium-width) {
+    .page-footer {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: @medium-width) {
+    .page-footer__colums {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .page-footer__copyright {
+        margin-bottom: 10px;
+    }
+}
