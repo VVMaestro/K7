@@ -7,53 +7,17 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body class="main-nav__container">
-    <header class="page-header">
-        <div class="container">
-            <div class="page-header__colums">
-                <button class="main-nav__switch main-nav__switch--zero-w page-header__switch">
-                    <span></span>
-                </button>
-                <div class="page-header__logo">
-                    <img src="img/small-logotype-dark.png">
-                </div>
-                <div class="language-button__wrapper page-header__language-button">
-                    <a href="#" class="language-button language-button--ru language-button--dark language-button--active"></a>
-                    <span class="language-button__line"></span>
-                    <a href="#" class="language-button language-button--en language-button--dark language-button--unactive"></a>
-                </div>
-                <a href="#" class="home-button home-button--dark page-header__home-button"></a>
-            </div>
-        </div>
-    </header>
-    <aside class="page__aside-panel page__aside-panel--zero-w">
-        <nav class="main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="index.html">Главная</a></li>
-                <li class="main-nav__item"><a href="#">Портфолио</a></li>
-                <li class="main-nav__item"><a href="#">Услуги</a></li>
-                <li class="main-nav__item"><a href="#">О нас</a></li>
-                <li class="main-nav__item"><a href="#">Блог</a></li>
-                <li class="main-nav__item"><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="main-nav__links">
-            <a href="#" class="main-nav__link">Бриф</a>
-            <a href="#" class="main-nav__link">Презентация</a>
-        </div>
-    </aside>
-    <div class="page__contacts">
-        <a href="mailto:k7@vayx.ru">k7@vayx.ru</a>
-        <p>Республика Карелия<br>
-            г.Петрозаводск ул. Ленина д.14</p>
-        <p>8 (981) 997-50-00</p>
-    </div>
-    <div class="page__dark-back"></div>
+
+    <include src='source/templates/header.html'></include>
+
     <main class="page-main">
         <section class="page-main__section">
             <div class="container">
-                <div class="main-title__colums">
-                    <h1 class="main-title">Блог креативной студии</h1>
-                    <div class="main-title__picture"></div>
+                <div class="main-title__wrapper">
+                    <div class="main-title__colums">
+                        <h1 class="main-title">Блог креативной студии</h1>
+                        <div class="main-title__picture main-title__picture--blog"></div>
+                    </div>
                 </div>
                 <div class="news__list">
                     <a href="#" class="news__item news__item--big">
@@ -115,6 +79,7 @@
                             <img src="img/news-back-big.jpg" width='410' height="250">
                         </div>
                         <div class="news__card">
+                            <h3 class="news__type">Статьи</h3>
                             <p class="news__text">Как мы автоматизировали согласование заявок сотрудников для
                                 российского банка</p>
                             <span class="news__date">29 апреля 2019</span>
@@ -125,6 +90,7 @@
                             <img src="img/news-back.jpg" width='410' height="250">
                         </div>
                         <div class="news__card">
+                            <h3 class="news__type">Статьи</h3>
                             <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
                             <span class="news__date">29 апреля 2019</span>
                         </div>
@@ -134,6 +100,7 @@
                             <img src="img/news-back.jpg" width='410' height="250">
                         </div>
                         <div class="news__card">
+                            <h3 class="news__type">Статьи</h3>
                             <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
                             <span class="news__date">29 апреля 2019</span>
                         </div>
@@ -143,6 +110,7 @@
                             <img src="img/news-back.jpg" width='410' height="250">
                         </div>
                         <div class="news__card">
+                            <h3 class="news__type">Статьи</h3>
                             <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
                             <span class="news__date">29 апреля 2019</span>
                         </div>
@@ -152,6 +120,7 @@
                             <img src="img/news-back.jpg" width='410' height="250">
                         </div>
                         <div class="news__card">
+                            <h3 class="news__type">Статьи</h3>
                             <p class="news__text">Как в Uplab разрабатывают сайты. Этап аналитики и проектирования</p>
                             <span class="news__date">29 апреля 2019</span>
                         </div>
@@ -160,31 +129,8 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="page-footer__colums">
-                <span class="page-footer__copyright">&copy; 2019 Creative studio</span>
-                <div class="inline-social__wrapper">
-                    <span class="inline-social__title">Медиа:</span>
-                    <ul class="inline-social__list">
-                        <li class="inline-social__item">
-                            <a href="#">Вконтакте</a>
-                        </li>
-                        <li class="inline-social__item">
-                            <a href="#">Инстаграм</a>
-                        </li>
-                        <li class="inline-social__item">
-                            <a href="#">Behance</a>
-                        </li>
-                        <li class="inline-social__item">
-                            <a href="#">facebook</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <script type="text/javascript" src="js/main-nav.js"></script>
-    <script type="text/javascript" src="js/language-button.js"></script>
+    
+    <include src='source/templates/footer.html'></include>
+    
 </body>
 </html>

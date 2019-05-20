@@ -16,7 +16,9 @@
     "gulp-imagemin": "^5.0.3",
     "gulp-less": "^4.0.1",
     "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^1.4.0"
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "posthtml-include": "^1.2.0"
   },
   "dependencies": {
     "swiper": "^4.5.0"
