@@ -1,0 +1,31 @@
+.checkbox-custom {
+    display: inline-block;
+    position: relative;
+
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid @main-dark;
+
+    cursor: pointer;
+
+    &::before {
+        content: '';
+
+        display: none;
+        position: absolute;
+
+        left: calc(50% - 12px/2);
+        top: calc(50% - 12px/2);
+
+        width: 12px;
+        height: 12px;
+
+        background-repeat: no-repeat;
+        background-image: url('../img/check-mark.png');
+    }
+}
+
+.checkbox-custom__native:checked + .checkbox-custom::before {
+    display: block;
+}

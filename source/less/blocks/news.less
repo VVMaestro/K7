@@ -19,7 +19,9 @@
 
 @media (max-width: @mobile-width) {
     .news__list {
+        justify-content: center;
         margin-top: 25px;
+        margin-right: 0;
     }
 }
 
@@ -32,7 +34,7 @@
     margin-right: @gap-width;
     padding-bottom: 275px;
 
-    // height: 520px;
+    height: 520px;
     width: calc(33.33% - @gap-width);
 
     text-decoration: none;
@@ -45,7 +47,7 @@
     }
 }
 
-@media (max-width: @large-width) {
+@media (max-width: @xmedium-width) {
     .news__item {
         width: calc(49.99% - @gap-width);
 
@@ -55,30 +57,21 @@
     }
 }
 
-@media (max-width: @medium-width) {
-    .news__item {
-        width: 100%;
-
-        &--big {
-            padding-bottom: 275px;
-        }
-    }
-}
-
 @media (max-width: @mobile-width) {
     .news__item {
+        margin-right: 0;
         padding-bottom: 200px;
+        max-width: 415px;
+        width: 100%;
+        height: 445px;     
     }
 }
 
 .news__picture {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
+    position: relative;
 
     width: 100%;
-    height: auto;
+    height: 250px;
 
     background-color: @biruse;
 
@@ -87,9 +80,29 @@
 
 .news__picture img {
     display: block;
+    position: absolute;
 
-    width: 100%;
-    height: auto;
+    top: 0;
+    left: calc(50% - 415px/2);
+
+    max-width: 415px;
+    width: 415px;
+    height: 100%;
+}
+
+.news__item--big .news__picture img {
+    left: calc(50% - 870px/2);
+    max-width: 870px;
+    width: 870px;
+}
+
+@media (max-width: @mobile-width) {
+    .news__item--big .news__picture img {
+        left: calc(50% - 415px/2);
+
+        max-width: 415px;
+        width: 415px;
+    }
 }
 
 .news__card {
@@ -124,9 +137,14 @@
     width: 64%;
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: @medium-width) {
     .news__card {
         padding: 20px 15px 30px 15px;
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .news__card {
         height: 200px;
     }
 
@@ -138,7 +156,7 @@
 
 .news__text {
     margin: 0;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 @media (max-width: @mobile-width) {
@@ -153,10 +171,10 @@
     left: 45px;
     bottom: 30px;
 
-    font-size: 20px;
+    font-size: 18px;
 }
 
-@media (max-width: @mobile-width) {
+@media (max-width: @medium-width) {
     .news__date {
         left: 15px;
         bottom: 10px;
@@ -173,7 +191,7 @@
     background-color: @orange;
 }
 
-@media (max-width: @medium-width) {
+@media (max-width: @mobile-width) {
     .news__item--big .news__card {
         width: 100%;
     }
@@ -246,4 +264,11 @@
             background-size: 30px auto;
         }
     }
+}
+
+.news__type {
+    margin: 0 0 20px 0;
+
+    font-size: 20px;
+    color: @light-grey;
 }
