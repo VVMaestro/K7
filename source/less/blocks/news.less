@@ -206,39 +206,8 @@
     height: 100%;
 }
 
-.news__more {
-    display: block;
-    position: relative;
-
-    box-sizing: border-box;
+.news__load-more {
     margin: 140px auto 0 auto;
-    padding-right: 60px;
-    height: 40px;
-    width: 230px;
-
-    font-size: 30px;
-    font-weight: 100;
-    color: #000;
-    text-decoration: none;
-
-    &::before {
-        content: '';
-
-        display: block;
-        position: absolute;
-
-        right: 0;
-        top: calc(50% - 40px/2);
-
-        width: 40px;
-        height: 40px;
-
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url('../img/cycle-arrows.png');
-
-        transition: all 0.2s ease-in-out;
-    }
 
     &:hover::before,
     &:focus::before {
@@ -247,22 +216,8 @@
 }
 
 @media (max-width: @medium-width) {
-    .news__more {
+    .news__load-more {
         margin-top: 80px;
-        padding-right: 30px;
-        height: 30px;
-        width: 200px;
-
-        font-size: 26px;
-
-        &::before {
-            top: calc(50% - 30px/2);
-
-            width: 30px;
-            height: 30px;
-
-            background-size: 30px auto;
-        }
     }
 }
 

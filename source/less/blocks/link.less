@@ -1,0 +1,44 @@
+.link {
+    position: relative;
+    display: inline-block;
+
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @menu-color;
+
+    transition: all .2s ease;
+
+    &::before {
+        content: '';
+
+        display: block;
+        position: absolute;
+
+        left: 0;
+        right: 0;
+
+        bottom: -3px;
+
+        height: 1px;
+
+        background-color: @menu-color;
+
+        transition: all .2s ease;
+    }
+
+    &--biruse {
+        color: @biruse;
+
+        &::before {
+            background-color: @biruse;
+        }
+
+        &:hover, &:focus {
+            color: @orange;
+
+            &::before {
+                background-color: @orange;
+            }
+        }
+    }
+}

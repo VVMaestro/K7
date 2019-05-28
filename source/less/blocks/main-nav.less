@@ -176,31 +176,9 @@
 }
 
 .main-nav__link {
-    position: relative;
-    display: inline-block;
-
-    text-transform: uppercase;
-    text-decoration: none;
-    color: @menu-color;
-
+   
     &:not(:last-child) {
         margin-right: 30px;
-    }
-
-    &::before {
-        content: '';
-
-        display: block;
-        position: absolute;
-
-        left: 0;
-        right: 0;
-
-        bottom: -3px;
-
-        height: 1px;
-
-        background-color: @menu-color;
     }
 }
 

@@ -55,57 +55,133 @@
                     </form>
                 </div>
                 <div class="work__list">
-                    <a href="#" class="work__item">
+                    <a href="project.html" class="work__item">
                         <div class="work__picture">
                             <img src="img/work-image.jpg" alt='Картинка'>
                         </div>
                         <div class="work__card">
                             <p class="work__sphere work__text work__hover">строительство</p>
                             <h2 class="work__text work__title">KarhumKelo</h2>
-                            <p class="work__desc work__text work__hover">Компания которая стоит дома из сухостойной сосны Kelo</p>
+                            <p class="work__desc work__text work__hover">Компания которая строит дома из сухостойной сосны Kelo</p>
                             <p class="work__tags work__text work__hover">Создание сайта / SMM / Дизайн</p>
                         </div>
                     </a>
-                    <a href="#" class="work__item">
+                    <a href="project.html" class="work__item">
                         <div class="work__picture">
                             <img src="img/work-image.jpg" alt='Картинка'>
                         </div>
                         <div class="work__card">
                             <p class="work__sphere work__text work__hover">строительство</p>
                             <h2 class="work__text work__title">KarhumKelo</h2>
-                            <p class="work__desc work__text work__hover">Компания которая стоит дома из сухостойной сосны Kelo</p>
+                            <p class="work__desc work__text work__hover">Компания которая строит дома из сухостойной сосны Kelo</p>
                             <p class="work__tags work__text work__hover">Создание сайта / SMM / Дизайн</p>
                         </div>
                     </a>
-                    <a href="#" class="work__item">
+                    <a href="project.html" class="work__item">
                         <div class="work__picture">
                             <img src="img/work-image.jpg" alt='Картинка'>
                         </div>
                         <div class="work__card">
                             <p class="work__sphere work__text work__hover">строительство</p>
                             <h2 class="work__text work__title">KarhumKelo</h2>
-                            <p class="work__desc work__text work__hover">Компания которая стоит дома из сухостойной сосны Kelo</p>
+                            <p class="work__desc work__text work__hover">Компания которая строит дома из сухостойной сосны Kelo</p>
                             <p class="work__tags work__text work__hover">Создание сайта / SMM / Дизайн</p>
                         </div>
                     </a>
-                    <a href="#" class="work__item">
+                    <a href="project.html" class="work__item">
                         <div class="work__picture">
                             <img src="img/work-image.jpg" alt='Картинка'>
                         </div>
                         <div class="work__card">
                             <p class="work__sphere work__text work__hover">строительство</p>
                             <h2 class="work__text work__title">KarhumKelo</h2>
-                            <p class="work__desc work__text work__hover">Компания которая стоит дома из сухостойной сосны Kelo</p>
+                            <p class="work__desc work__text work__hover">Компания которая строит дома из сухостойной сосны Kelo</p>
                             <p class="work__tags work__text work__hover">Создание сайта / SMM / Дизайн</p>
                         </div>
                     </a>
+                </div>
+                <a href="#" class="load-more work__load-more">показать ещё</a>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="order-work__colums">
+                    <div class="order-work__text">
+                        <h2 class="order-work__title">Нравятся наши работы?</h2>
+                        <span>Закажите услугу прямо сейчас!</span><br>
+                        <a href="#" class="order-work__link link link--biruse">Заполнить бриф</a>
+                    </div>
+                    <button href="#" class="button js-order-work">Заказать</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <include src='source/templates/footer.html'></include>    
+    <include src='source/templates/footer.html'></include>
+
+    <section class="popup js-order-popup">
+        <button class="popup__close js-order-close"></button>
+        <h2 class="popup__title">Заказать услугу</h2>
+        <form class="popup__form js-order-form" action="" method="">
+            <input type="tel" class="popup__input" placeholder="Ваш телефон" required>
+            <input type="email" class="popup__input" placeholder="Ваш email" required>
+            <input type="text" class="popup__input" placeholder="Ваше имя" required>
+            <h3 class="popup__subtitle">Что заказываем</h3>
+            <div class="popup__wrapper">
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox"
+                        name="order" value="comics">
+                    <span class="checkbox-custom"></span>
+                    <span>Нарисовать комикс</span>
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" 
+                        name="order" value="logo">
+                    <span class="checkbox-custom"></span>
+                    Нарисовать логотип
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" 
+                        name="order" value="animation">
+                    <span class="checkbox-custom"></span>
+                    Нарисовать анимацию
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" 
+                        name="order" value="cartoon">
+                    <span class="checkbox-custom"></span>
+                    Нарисовать мультфильм
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" 
+                        name="order" value="site">
+                    <span class="checkbox-custom"></span>
+                    Создать сайт
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" 
+                        name="order" value="app">
+                    <span class="checkbox-custom"></span>
+                    Создать приложение
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" 
+                    name="order" value="doodle">
+                    <span class="checkbox-custom"></span>
+                    Создать дудл видео 
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" 
+                        name="order" value="smm">
+                    <span class="checkbox-custom"></span>
+                    SMM продвижение
+                </label>
+            </div>
+            <input type="submit" class="popup__button" value="Отправить">
+        </form>
+    </section>
 
     <script type="text/javascript" src="js/filter.js"></script>
+    <script type="text/javascript" src="js/order-form.js"></script>
 </body>
 </html>

@@ -1,0 +1,132 @@
+.arrow-button {
+    position: relative;
+    display: inline-block;
+
+    padding-right: 30px;
+    padding-left: 60px;
+    height: 50px;
+
+    font-size: 22px;
+    text-decoration: none;
+
+    border-radius: 25px;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.arrow-button__circle {
+    position: absolute;
+    display: block;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 50px;
+
+    border-radius: 50px;
+
+    background-color: @black;
+
+    transition: all .3s ease;
+}
+
+.arrow-button__icon {
+    display: block;
+    position: absolute;
+
+    left: calc(50px/2 - 10px);
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+    width: 15px;
+    height: 2px;
+
+    background-color: transparent;
+
+    transition: all .3s ease;
+
+    &::before {
+        content: '';
+
+        display: block;
+        position: absolute;
+
+        top: -5px;
+        right: 0;
+
+        width: 10px;
+        height: 10px;
+
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+        background-color: transparent;
+
+        transform: rotate(45deg);
+    }
+}
+
+.arrow-button__text {
+    text-transform: uppercase;
+    vertical-align: middle;
+    line-height: 1.6;
+    color: @black;
+
+    transition: all .3s ease;
+}
+
+.arrow-button {
+    &:hover, &:focus {
+        .arrow-button__icon {
+            left: calc(50px/2);
+            background-color: #fff;
+        }
+
+        .arrow-button__circle {
+            width: 100%;
+            z-index: -1;
+        }
+
+        .arrow-button__text {
+            color: #fff;
+        }
+    }
+}
+
+.arrow-button--vert {
+    padding-right: 60px;
+    padding-left: 30px;
+
+    .arrow-button__circle {
+        left: auto;
+        right: 0;
+    }
+
+    .arrow-button__icon {
+        top: calc(-10px/2);
+        left: auto;
+        right: calc(50px/2 - 2px);
+
+        width: 2px;
+        height: 15px;
+
+        &::before {
+            top: auto;
+            right: -5px;
+            bottom: 0;
+
+            transform: rotate(135deg);
+        }
+    }
+
+    &:hover, &:focus {
+        .arrow-button__icon {
+            top: calc(10px/2);
+            left: auto;
+            right: calc(50px/2 - 2px);
+        }
+    }
+}

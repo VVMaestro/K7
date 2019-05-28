@@ -1,0 +1,248 @@
+.popup {
+    display: none;
+    position: fixed;
+
+    top: 10%;
+    left: calc(50% - 865px/2);
+
+    box-sizing: border-box;
+    padding: 45px 60px;
+    width: 865px;
+    min-height: 200px;
+
+    border-radius: 14px;
+    background-color: #fff;
+
+    z-index: 4;
+
+    &--open {
+        display: block;
+    }
+}
+
+@media (max-width: @xmedium-width) {
+    .popup {
+        top: 5%;
+        left: calc(50% - 500px/2);
+
+        padding: 30px 10px;
+        width: 500px;
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .popup {
+        top: .5%;
+        left: calc(50% - 300px/2);
+
+        padding: 20px 5px;
+        width: 300px;
+    }
+}
+
+.popup__close {
+    position: absolute;
+
+    right: 35px;
+    top: 35px;
+
+    width: 30px;
+    height: 30px;
+
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+
+        display: block;
+        position: absolute;
+
+        left: calc(50% - 40px/2);
+        top: calc(50% - 3px/2);
+
+        width: 40px;
+        height: 3px;
+
+        background-color: #000;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .popup__close {
+        right: 25px;
+        top: 25px;
+
+        width: 20px;
+        height: 20px;
+
+        &::before,
+        &::after {
+            left: calc(50% - 30px/2);
+            top: calc(50% - 3px/2);
+
+            width: 30px;
+            height: 3px;
+        }
+    }
+}
+
+.popup__title {
+    margin: 0 0 40px 0;
+
+    text-align: center;
+    font-size: 32px;
+    color: @orange;
+}
+
+.popup__subtitle {
+    margin: 0 0 30px 85px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media (max-width: @xmedium-width) {
+    .popup__title {
+        margin-bottom: 20px;
+    }
+
+    .popup__subtitle {
+        margin-bottom: 15px;
+        margin-left: 55px;
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .popup__title {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .popup__subtitle {
+        font-size: 16px;
+    }
+}
+
+.popup__input {
+    box-sizing: border-box;
+    margin-left: 45px;
+    margin-bottom: 30px;
+    padding: 0 35px;
+
+    width: 300px;
+    height: 50px;
+
+    font-family: 'KelsonSans',
+    Arial,
+    sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+
+    border: 1px solid @light-grey;
+    border-radius: 40px;
+
+    &::-moz-placeholder {
+        color: @light-grey;
+    }
+
+    &::-webkit-input-placeholder {
+        color: @light-grey;
+    }
+
+    &::-ms-input-placeholder {
+        color: @light-grey;
+    }
+
+    &::placeholder {
+        color: @light-grey;
+    }
+}
+
+@media (max-width: @xmedium-width) {
+    .popup__input {
+        padding: 0 20px;
+        margin-left: 20px;
+        margin-bottom: 15px;
+        width: 200px;
+        height: 40px;
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .popup__input {
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+}
+
+.popup__wrapper {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media (max-width: @mobile-width) {
+    .popup__wrapper {
+        font-size: 14px;
+    }
+}
+
+.popup__checkbox {
+    display: inline-block;
+    margin-left: 45px;
+    margin-bottom: 20px;
+
+    & span {
+        vertical-align: bottom;
+    }
+}
+
+@media (max-width: @xmedium-width) {
+    .popup__checkbox {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: @mobile-width) {
+    .popup__checkbox {
+        display: block;
+        margin: 0 auto 10px auto;
+        max-width: 200px;
+    }
+}
+
+.popup__button {
+    display: block;
+
+    box-sizing: border-box;
+    margin: 20px auto 0;
+    padding: 0 60px;
+    height: 50px;
+
+    font-size: 22px;
+    font-weight: 400;
+
+    border: none;
+    border-radius: 40px;
+    background-color: @active-word;
+}
+
+@media (max-width: @mobile-width) {
+    .popup__button {
+        padding: 0 20px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+}

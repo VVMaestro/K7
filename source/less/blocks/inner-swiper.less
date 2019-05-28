@@ -5,10 +5,10 @@
     bottom: 24%;
 
     width: 700px;
-    height: auto;
     min-height: 52px;
 
     font-size: 34px;
+    line-height: 1;
 
     overflow: hidden;
 }
@@ -50,6 +50,8 @@
     margin: 0 auto;
     left: 50px;
     width: 70px;
+
+    font-size: 10px;
 }
 
 .inner-swiper__pagination .swiper-pagination-bullet {
@@ -67,8 +69,9 @@
 }
 
 .inner-swiper__link {
-    display: block;
+    display: inline-block;
 
+    vertical-align: top;
     text-align: left;
     font-size: 17px;
     color: @main-dark;
