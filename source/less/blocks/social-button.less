@@ -1,0 +1,36 @@
+.social-button {
+    display: inline-block;
+
+    padding: 5px 20px 5px 45px;
+
+    color: @main-dark;
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+
+    border: 1px solid @active-word;
+    border-radius: 2px;
+
+    background-repeat: no-repeat;
+    background-position: 20px center;
+
+    &--fb {
+        background-image: url(../img/facebook.png);
+    }
+    &--vk {
+        padding-left: 65px;
+        background-image: url(../img/vkontakte.png);
+    }
+    &--tw {
+        padding-left: 55px;
+        background-image: url(../img/twitter.png);
+    }
+
+    &:not(:last-child) {
+        margin-right: 25px;
+    }
+}
+
+.social-button__wrapper {
+    padding: 0 20px;
+}

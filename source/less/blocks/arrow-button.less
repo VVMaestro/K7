@@ -8,6 +8,7 @@
 
     font-size: 22px;
     text-decoration: none;
+    font-weight: 400;
 
     border-radius: 25px;
     border: none;
@@ -72,7 +73,7 @@
 .arrow-button__text {
     text-transform: uppercase;
     vertical-align: middle;
-    line-height: 1.6;
+    line-height: 50px;
     color: @black;
 
     transition: all .3s ease;
@@ -106,7 +107,7 @@
     }
 
     .arrow-button__icon {
-        top: calc(-10px/2);
+        top: -10px;
         left: auto;
         right: calc(50px/2 - 2px);
 
@@ -124,7 +125,7 @@
 
     &:hover, &:focus {
         .arrow-button__icon {
-            top: calc(10px/2);
+            top: 0;
             left: auto;
             right: calc(50px/2 - 2px);
         }
