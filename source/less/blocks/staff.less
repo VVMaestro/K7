@@ -1,6 +1,10 @@
 @staff-gap: 30px;
 @staff-gap-b: 50px;
 
+.staff__section {
+    padding: 0 0 100px 0;
+}
+
 .staff__colums {
     display: flex;
 
@@ -8,15 +12,28 @@
     align-items: flex-end;
 
     margin-bottom: 110px;
-    padding: 0 20px;
+
+    @media (max-width: @medium-width) {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
 }
 
 .staff__first {
     width: 43%;
+
+    @media (max-width: @medium-width) {
+        margin-bottom: 50px;
+        width: 100%;
+    }
 }
 
 .staff__second {
     width: 47.9%;
+
+    @media (max-width: @medium-width) {
+        width: 100%;
+    }
 }
 
 .staff__grid {
@@ -30,6 +47,11 @@
     margin-bottom: -@staff-gap-b;
 
     width: 100%;
+
+    @media (max-width: @medium-width) {
+        justify-content: center;
+        margin-right: 0;
+    }
 }
 
 .staff {
@@ -44,6 +66,11 @@
     text-decoration: none;
     font-size: 17px;
     font-weight: 400;
+
+    @media (max-width: @medium-width) {
+        min-width: 100px;
+        font-size: 14px;
+    }
 }
 
 .staff__title {
@@ -51,6 +78,10 @@
 
     color: @orange;
     font-size: 42px;
+
+    @media (max-width: @medium-width) {
+        font-size: 36px;
+    }
 }
 
 .staff__text {
@@ -68,13 +99,21 @@
     border-radius: 50%;
 
     overflow: hidden;
+
+    @media (max-width: @medium-width) {
+        width: 80px;
+        height: 80px;
+    }
 }
 
 .staff__name {
+    display: block;
+
     margin-bottom: 5px;
     color: @main-dark;
 }
 
 .staff__pos {
+    display: block;
     color: @light-grey;
 }

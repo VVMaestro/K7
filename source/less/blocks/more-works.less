@@ -3,29 +3,131 @@
 }
 
 .more-works__section {
+    margin-bottom: 100px;
     padding-top: 1px;
+    padding-bottom: 120px;
+
+
     background-color: @grey;
 }
 
 .more-works__title {
     margin: 75px 0 60px;
-    padding: 0 20px;
+    padding: 0;
 
     color: @biruse;
     font-size: 42px;
+
+    @media (max-width: @medium-width) {
+        font-size: 36px;
+    }
 }
 
 .more-works__list {
     display: flex;
 
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    margin: 0;
-    padding: 0 20px;
+    margin: 0 -15px;
+    padding: 0;
 
     list-style: none;
 }
 
 .more-works__item {
-    
+    padding: 0 15px;
+
+    width: calc(33.3% - 30px);
+    max-width: 364px;
+    height: 208px;
+
+    @media (max-width: @medium-width) {
+        margin: 0 auto 30px auto;
+        width: 100%;
+    }
+}
+
+.more-works__item a {
+    position: relative;
+    display: block;
+
+    height: 100%;
+
+    text-transform: none;
+
+    overflow: hidden;
+}
+
+.more-works__desc {
+    position: absolute;
+    visibility: hidden;
+
+    left: 0;
+    top: 0;
+
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+
+    background-color: fade(@main-dark, 65%);
+    opacity: 0;
+
+    transition: all .3s ease;
+}
+
+.more-works__item a:hover .more-works__desc {
+    visibility: visible;
+    opacity: 1;
+}
+
+.more-works__name {
+    margin: 40px auto 30px auto;
+    max-width: 290px;
+
+    color: #fff;
+    font-size: 34px;
+
+    @media (max-width: @xmedium-width) {
+        font-size: 26px;
+    }
+}
+
+.more-works__type {
+    display: block;
+
+    margin: 0 auto;
+    max-width: 290px;
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 100;
+
+    @media (max-width: @xmedium-width) {
+        font-size: 16px;
+    }
+}
+
+.more-works__picture {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+.more-works__picture img {
+    @pic-width: 364px;
+    @pic-height: 208px;
+
+    position: absolute;
+    display: block;
+
+    left: calc(50% - @pic-width/2);
+    // left: 0;
+    top: 0;
+
+    max-width: unset;
+    width: auto;
+    height: 100%;
 }

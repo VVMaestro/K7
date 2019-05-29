@@ -1,3 +1,8 @@
+.project__section {
+    margin-top: 70px;
+    margin-bottom: 80px;
+}
+
 .project__intro {
     display: flex;
 
@@ -6,6 +11,10 @@
 
     margin-bottom: 110px;
     padding: 0 80px 0 55px;
+
+    @media (max-width: @medium-width) {
+        flex-direction: column;
+    }
 }
 
 .project__title {
@@ -14,7 +23,12 @@
     color: @biruse;
     font-size: 46px;
     font-weight: 400;
+
+    @media (max-width: @medium-width) {
+        text-align: center;
+    }
 }
+
 
 .project__info {
     margin: 0;
@@ -22,6 +36,11 @@
     color: @black;
     font-size: 28px;
     font-weight: 100;
+
+    @media (max-width: @medium-width) {
+        margin-bottom: 50px;
+        text-align: center;
+    }
 }
 
 .project__picture {
@@ -41,10 +60,23 @@
     align-items: flex-start;
 
     margin-top: 90px;
+
+    @media (max-width: @medium-width) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .project__col {
     width: 30%;
+
+    @media (max-width: @medium-width) {
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
 }
 
 .project__subtitle {
