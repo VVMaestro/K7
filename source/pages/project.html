@@ -17,7 +17,7 @@
                         <h2 class="project__title">KarhumKelo</h2>
                         <p class="project__info">Строительство домов из Kelo</p>
                     </div>
-                        <button class="arrow-button arrow-button--vert">
+                        <button class="arrow-button arrow-button--vert js-scroll-button">
                             <div class="arrow-button__circle">
                                 <span class="arrow-button__icon"></span>
                             </div>
@@ -27,7 +27,7 @@
                 <div class="project__picture js-lazy">
                     <img src="img/project-picture.jpg" alt="Превью проекта">
                 </div>
-                <div class="project__colums">
+                <div class="project__colums js-lazy js-scroll-to">
                     <div class="project__col">
                         <h3 class="project__subtitle">История клиента</h3>
                         <p class="project__text">
@@ -53,7 +53,7 @@
                         </p>
                     </div>
                 </div>
-                <a class="project__arrow-button arrow-button">
+                <a class="project__arrow-button arrow-button js-lazy">
                     <div class="arrow-button__circle">
                         <span class="arrow-button__icon"></span>
                     </div>
@@ -65,7 +65,7 @@
             <div class="container">
                 <h2 class="visually-hidden">Детали проекта</h2>
                 <section class="details__section">
-                    <div class="details__intro">
+                    <div class="details__intro js-lazy">
                         <h3 class="details__title">Логотип</h3>
                         <p class="details__text">
                             В логотипе — телефон, он состоит из кусочков, а они собираются в единое целое
@@ -74,29 +74,29 @@
                         </p>
                     </div>
                     <ul class="details__list">
-                        <li class="details__item details__item--large">
+                        <li class="details__item details__item--large js-lazy">
                             <h4 class="details__subtitle">Логотип</h4>
                             <div class="details__list-picture"><img src="img/bank.png" alt="Логотип"></div>
                         </li>
-                        <li class="details__item">
+                        <li class="details__item js-lazy">
                             <h4 class="details__subtitle">Логотип</h4>
                             <div class="details__list-picture"><img src="img/bookmakers.png" alt="Логотип"></div>
                         </li>
-                        <li class="details__item">
+                        <li class="details__item js-lazy">
                             <h4 class="details__subtitle">Логотип</h4>
                             <div class="details__list-picture"><img src="img/bookmakers2.png" alt="Логотип"></div>
                         </li>
                     </ul>
                 </section>
                 <section class="details__section">
-                    <div class="details__intro">
+                    <div class="details__intro js-lazy">
                         <h3 class="details__title">Фирменные цвета</h3>
                         <p class="details__text">
                             Чистые, свежие, технологичные оттенки, которые легко делают любой носитель
                             фирменным.
                         </p>
                     </div>
-                    <div class="details__picture">
+                    <div class="details__picture js-lazy">
                         <img src="img/colors.png" alt="Фирменные цвета">
                     </div>
                 </section>
@@ -104,7 +104,7 @@
         </section>
         <section class="staff__section">
             <div class="container">
-                <div class="staff__colums">
+                <div class="staff__colums js-lazy">
                     <div class="staff__first">
                         <h2 class="staff__title">Над проектом работали</h2>
                         <p class="staff__text">
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="social-button__wrapper">
+                <div class="social-button__wrapper js-lazy">
                     <a href="#" class="social-button social-button--fb">Поделиться</a>
                     <a href="#" class="social-button social-button--vk">Репостнуть</a>
                     <a href="#" class="social-button social-button--tw">Твитнуть</a>
@@ -177,8 +177,8 @@
         </section>
         <section class="more-works__section">
             <div class="container">
-                <h2 class="more-works__title">Другие работы креативной студии</h2>
-                <ul class="more-works__list">
+                <h2 class="more-works__title js-lazy">Другие работы креативной студии</h2>
+                <ul class="more-works__list js-lazy">
                     <li class="more-works__item">
                         <a href="#">
                             <div class="more-works__picture">
@@ -219,5 +219,7 @@
 
     <include src='source/templates/footer.html'></include>
 
+    <script type="text/javascript" src="js/lazy-load.js"></script>
+    <script type="text/javascript" src="js/scrollTo.js"></script>
 </body>
 </html>
