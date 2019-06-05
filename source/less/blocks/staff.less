@@ -1,20 +1,16 @@
 @staff-gap: 30px;
 @staff-gap-b: 50px;
 
-.staff__section {
-    padding: 0 0 100px 0;
-}
-
 .staff__colums {
     display: flex;
 
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: flex-start;
 
     margin-bottom: 110px;
 
     @media (max-width: @medium-width) {
-        flex-direction: column;
+        flex-direction: column-reverse;
         margin-bottom: 50px;
     }
 }
@@ -32,6 +28,7 @@
     width: 47.9%;
 
     @media (max-width: @medium-width) {
+        margin: 50px 0;
         width: 100%;
     }
 }
@@ -49,7 +46,7 @@
     width: 100%;
 
     @media (max-width: @medium-width) {
-        justify-content: center;
+        // justify-content: center;
         margin-right: 0;
     }
 }

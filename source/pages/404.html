@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Не найдено</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body class="main-nav__container not-found__page">
+    <include src='source/templates/header.html'></include>
+
+    <main class="not-found__main">
+        <section>
+            <h1 class="visually-hidden">Несуществующая страница</h1>
+            <div class="container">
+                <div class="not-found__columns">
+                    <div class="not-found__picture">
+                        <img src="img/404.png" alt="Страница не найдена">
+                    </div>
+                    <div class="not-found__message">
+                        <p class="not-found__text">
+                            Такой страницы на сайте не существует.<br>
+                            Вероятно Вы хотели бы посмотреть на примеры работ или узнать что мы делаем?
+                        </p>
+                        <div class="not-found__wrapper">
+                            <a href="#" class="button not-found__button">Смотреть работы</a>
+                            <a href="#" class="button not-found__button">Перейти на главную</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <include src='source/templates/footer.html'></include>
+</body>
+</html>
