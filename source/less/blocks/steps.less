@@ -1,0 +1,146 @@
+.steps {
+
+}
+
+.steps__columns {
+    display: flex;
+
+    justify-content: space-around;
+    height: 550px;
+
+    margin-bottom: 80px;
+}
+
+.steps__item {
+    width: 310px;
+
+    &--left {
+        align-self: flex-start;
+    }
+    &--right {
+        align-self: flex-end;
+    }
+}
+
+.steps__pic {
+    height: 190px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &--order {
+        background-image: url(../img/order.png);
+    }
+    &--request {
+        background-image: url(../img/request.png);
+    }
+}
+
+.steps__title {
+    margin: 18px 0 0 0;
+
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.steps__text {
+    margin: 10px 0 0 0;
+
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+}
+
+.steps__guid {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-end;
+
+    margin-bottom: 40px;
+    height: 315px;
+
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.steps__circle {
+    display: flex;
+    position: relative;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 3px solid @black;
+    border-radius: 50%;
+
+    & span {
+        transform: translate(2px, 3px);
+    }
+}
+
+.steps__circle-back {
+    position: absolute;
+
+    right: -3px;
+    bottom: -4px;
+
+    width: 105%;
+    height: 105%;
+
+    background-color: @orange;
+    border-radius: 50%;
+
+    z-index: -1;
+}
+
+.steps__line {
+    flex-grow: 1;
+
+    margin: 5px 0;
+    width: 3px;
+
+    background-color: @black;
+}
+
+.steps__transition {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto 100px auto;
+    max-width: 780px;
+    height: 350px;
+}
+
+.steps__success {
+    align-self: stretch;
+
+    margin: 0 0 0 0;
+    padding-left: 65px;
+    height: 45px;
+
+    font-size: 24px;
+    font-weight: 100;
+    color: @dark-green;
+    vertical-align: middle;
+    line-height: 45px;
+
+    border-radius: 3px;
+    border: 2px solid @sec-green;
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: 40px center;
+    background-image: url('../img/green-check.png');
+}

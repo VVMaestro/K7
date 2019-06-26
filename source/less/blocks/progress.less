@@ -1,0 +1,64 @@
+.progress__list {
+    display: flex;
+    list-style: none;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    margin-bottom: 170px;
+}
+
+.progress__title,
+.progress__text {
+    padding-left: 50px;
+}
+
+.progress__title {
+    display: flex;
+
+    align-items: center;
+
+    margin: 0 0 10px 0;
+    max-width: 290px;
+    min-height: 80px;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url('../img/circle.png');
+}
+
+.progress__text {
+    margin: 0;
+    max-width: 350px;
+
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.progress__item {
+    &:not(:last-child) {
+        margin-bottom: 65px;
+    }
+
+    &--right {
+        align-self: flex-end;
+    }
+
+    &--right .progress__title,
+    &--right .progress__text {
+        margin-left: auto; 
+        padding-left: 0;
+        padding-right: 50px;
+        
+        text-align: right;
+    }
+
+    &--right .progress__title {
+        background-image: url('../img/circle-rotate.png');
+        background-position: right top;
+    }
+}

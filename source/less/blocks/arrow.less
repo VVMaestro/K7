@@ -1,0 +1,57 @@
+.arrow {
+    position: relative;
+
+    width: 30px;
+    height: 30px;
+
+    &::before,
+    &::after {
+        content: '';
+
+        display: block;
+        position: absolute;
+
+        width: 3px;
+        height: 40px;
+    }
+
+    &::before {
+        top: 0;
+        right: 0;
+
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        top: 0;
+        left: 0;
+
+        transform: rotate(-45deg);
+    }
+
+    &--orange::before,
+    &--orange::after {
+        background-color: @orange;
+    }
+
+    &--biruse::before,
+    &--biruse::after {
+        background-color: @biruse;
+    }
+
+    &--botshadow::before {
+        box-shadow: 13px 13px 0 0 @green;
+    }
+
+    &--botshadow::after {
+        box-shadow: -13px 13px 0 0 @green;
+    }
+
+    &--upshadow::before {
+        box-shadow: -13px -13px 0 0 @green;
+    }
+
+    &--upshadow::after {
+        box-shadow: 13px -13px 0 0 @green;
+    }
+}
