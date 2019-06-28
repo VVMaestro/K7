@@ -10,3 +10,33 @@
         opacity: 1;
     }
 }
+
+.js-lazy-left {
+    transition: all .8s ease;
+    transition-delay: .5s;
+
+    &--hide {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    &--show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.js-lazy-right {
+    transition: all .8s ease;
+    transition-delay: .5s;
+
+    &--hide {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    &--show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
