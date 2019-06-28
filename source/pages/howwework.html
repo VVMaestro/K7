@@ -63,8 +63,8 @@
         <section class="page-main__section">
             <h2 class="visually-hidden">Прогресс работы над проектом</h2>
             <div class="container">
-                <ul class="progress__list">
-                    <li class="progress__item">
+                <ul class="progress__list" id="js-progress-start">
+                    <li class="progress__item js-lazy-timer js-lazy-left">
                         <h3 class="progress__title">
                             После заполнения брифа
                             мы приступаем к работе
@@ -74,7 +74,7 @@
                             вашим проектом.
                         </p>
                     </li>
-                    <li class="progress__item progress__item--right">
+                    <li class="progress__item progress__item--right js-lazy-timer js-lazy-right">
                         <h3 class="progress__title">
                             Проект ведёт ваш
                             персональный менеджер
@@ -85,7 +85,7 @@
                             будет держать вас в курсе
                         </p>
                     </li>
-                    <li class="progress__item">
+                    <li class="progress__item js-lazy-timer js-lazy-left">
                         <h3 class="progress__title">
                             Отправляем результaт
                         </h3>
@@ -105,9 +105,9 @@
                 </h2>
                 <form action="#" method="POST" class="big-form">
                     <div class="big-form__wrapper">
-                        <input type="text" class="form__input" name="name" placeholder="Ваше имя">
-                        <input type="tel" class="form__input" name="phone" placeholder="Номер телефона (если нужно позвонить)">
-                        <input type="email" class="form__input" name="email" placeholder="Ваш email">
+                        <input type="text" class="form__input big-form__input" name="name" placeholder="Ваше имя">
+                        <input type="tel" class="form__input big-form__input" name="phone" placeholder="Номер телефона (если нужно позвонить)">
+                        <input type="email" class="form__input big-form__input" name="email" placeholder="Ваш email">
                         <textarea class="form__textarea form__textarea--bot-border big-form__textarea" name="message"
                             placeholder="Ваше сообщение"></textarea>
                     </div>
@@ -120,5 +120,7 @@
     </main>
 
     <include src='source/templates/footer.html'></include>
+
+    <script src="js/lazy-load-timer.js"></script>
 </body>
 </html>
