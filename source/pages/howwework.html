@@ -27,7 +27,7 @@
                     <div class="steps__columns">
                         <div class="steps__item steps__item--left">
                             <div class="steps__pic steps__pic--request"></div>
-                            <h3 class="steps__title">Оставьте заявку</h3>
+                            <h3 class="steps__title steps__link js-order-work">Оставьте заявку</h3>
                             <p class="steps__text">
                                 Оставьте телефон - наш заботливый менеджер
                                 позвонит вам
@@ -80,7 +80,7 @@
                             персональный менеджер
                         </h3>
                         <p class="progress__text">
-                            Менеджер поможет грамотно заполнить бриф,
+                            Менеджер поможет грамотно заполнить <a href="#" class="steps__link">бриф</a>,
                             отправит все нужные файлы и документы,
                             будет держать вас в курсе
                         </p>
@@ -121,6 +121,62 @@
 
     <include src='source/templates/footer.html'></include>
 
+    <section class="popup js-order-popup">
+        <button class="popup__close js-order-close"></button>
+        <h2 class="popup__title">Заказать услугу</h2>
+        <form class="popup__form js-order-form" action="" method="">
+            <input type="tel" class="popup__input" placeholder="Ваш телефон" required>
+            <input type="email" class="popup__input" placeholder="Ваш email" required>
+            <input type="text" class="popup__input" placeholder="Ваше имя" required>
+            <h3 class="popup__subtitle">Что заказываем</h3>
+            <div class="popup__wrapper">
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="comics">
+                    <span class="checkbox-custom"></span>
+                    <span>Нарисовать комикс</span>
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="logo">
+                    <span class="checkbox-custom"></span>
+                    Нарисовать логотип
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order"
+                        value="animation">
+                    <span class="checkbox-custom"></span>
+                    Нарисовать анимацию
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="cartoon">
+                    <span class="checkbox-custom"></span>
+                    Нарисовать мультфильм
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="site">
+                    <span class="checkbox-custom"></span>
+                    Создать сайт
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="app">
+                    <span class="checkbox-custom"></span>
+                    Создать приложение
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="doodle">
+                    <span class="checkbox-custom"></span>
+                    Создать дудл видео
+                </label>
+                <label class="popup__checkbox">
+                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="smm">
+                    <span class="checkbox-custom"></span>
+                    SMM продвижение
+                </label>
+            </div>
+            <input type="submit" class="popup__button" value="Отправить">
+        </form>
+    </section>
+
     <script src="js/lazy-load-timer.js"></script>
+    <script src="js/order-form.js"></script>
 </body>
 </html>
