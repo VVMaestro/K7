@@ -1,11 +1,17 @@
 .service__columns {
     display: flex;
+
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .service__col {
     &:not(:last-child) {
         margin-right: 80px;
+
+        @media (max-width: @mobile-width) {
+            margin-right: 20px;
+        }
     }
 }
 
@@ -14,6 +20,10 @@
 
     font-size: 36px;
     font-weight: 400;
+
+    @media (max-width: @medium-width) {
+        font-size: 26px;
+    }
 }
 
 .service__list {
@@ -27,6 +37,10 @@
 
     font-size: 24px;
     font-weight: 400;
+
+    @media (max-width: @medium-width) {
+        font-size: 19px;
+    }
 }
 
 .service__item a {
