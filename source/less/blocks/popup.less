@@ -8,7 +8,7 @@
     box-sizing: border-box;
     padding: 45px 60px;
     width: 865px;
-    min-height: 200px;
+    // min-height: 200px;
 
     border-radius: 14px;
     background-color: #fff;
@@ -17,6 +17,13 @@
 
     &--open {
         display: block;
+    }
+
+    &--small {
+        left: calc(50% - 760px/2);
+
+        padding: 80px 80px 65px 110px;
+        width: 760px;
     }
 }
 
@@ -244,5 +251,24 @@
         height: 40px;
 
         font-size: 18px;
+    }
+}
+
+.popup__columns {
+    display: flex;
+
+    @media (max-width: @mobile-width) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.popup__text {
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: -2px;
+
+    @media (max-width: @medium-width) {
+        font-size: 22px;
     }
 }

@@ -28,7 +28,7 @@
                             <li class="service__item"><a href="#">Рисуем комиксы</a></li>
                             <li class="service__item"><a href="#">Макеты сайтов</a></li>
                             <li class="service__item"><a href="#">Логотипы</a></li>
-                            <li class="service__item"><a>Портреты</a></li>
+                            <li class="service__item service__item--with-window"><a href="#">Портреты</a></li>
                         </ul>
                     </div>
                     <div class="service__col">
@@ -44,16 +44,16 @@
                         <h2 class="service__title">Оживляем</h2>
                         <ul class="service__list">
                             <li class="service__item"><a href="#">Анимация</a></li>
-                            <li class="service__item"><a>Рекламные ролики</a></li>
-                            <li class="service__item"><a>Дудл-видео</a></li>
+                            <li class="service__item service__item--with-window"><a href="#">Рекламные ролики</a></li>
+                            <li class="service__item service__item--with-window"><a href="#">Дудл-видео</a></li>
                         </ul>
                     </div>
                     <div class="service__col">
                         <div class="service__pic service__pic--tiles"></div>
                         <h2 class="service__title">Продвигаем</h2>
                         <ul class="service__list">
-                            <li class="service__item"><a>Ведение соц.сетей</a></li>
-                            <li class="service__item"><a>Поднимаем сайт в топ</a></li>
+                            <li class="service__item service__item--with-window"><a href="#">Ведение соц.сетей</a></li>
+                            <li class="service__item service__item--with-window"><a href="#">Поднимаем сайт в топ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -75,5 +75,21 @@
     </main>
 
     <include src='source/templates/footer.html'></include>
+
+    <section class="popup popup--small js-order-popup">
+        <button class="popup__close js-order-close"></button>
+        <h2 class="popup__title">Хотите заказать?</h2>
+        <p class="popup__text">
+            Чтобы заказать брендинговое исследование оставьте свой номер телефона и наш менеджер с вами свяжется. Или
+            позвоните по номеру:
+            8 800 777-04-75
+        </p>
+        <form class="popup__columns" action="" method="POST">
+            <input class="recall__input recall__input--small" type="tel" name="phone" placeholder="Номер телефона">
+            <button class="recall__button">Отправить</button>
+        </form>
+    </section>
+
+    <script type="text/javascript" src="js/services-popup.js"></script>
 </body>
 </html>
