@@ -18,12 +18,10 @@ mainSwiper.on('slideChange', function () {
 mainSwiper.on('slideChange', function () {
     const PAGE_INDEX = 1;
     const secPageIntro = document.querySelector('.second-page__intro');
-    const secPageIntroMore = document.querySelector('.more-info');
 
     if (mainSwiper.activeIndex == PAGE_INDEX) {
         secPageIntro.classList.add('second-page__intro--open');
     } else {
         secPageIntro.classList.remove('second-page__intro--open');
-        secPageIntroMore.classList.remove('more-info--maxied');
     }
 });

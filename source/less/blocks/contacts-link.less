@@ -1,0 +1,39 @@
+.contacts-link {
+    display: inline-block;
+
+    box-sizing: border-box;
+    padding: 12px 45px;
+    height: 40px;
+
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: @main-dark;
+
+    border: 2px solid @main-dark;
+
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        background-color: @main-dark;
+    }
+
+    &--light {
+        border-color: #fff;
+        color: #fff;
+
+        &:hover {
+            color: @main-dark;
+            background-color: #fff;
+        }
+    }
+}
+
+@media (max-width: @medium-width) {
+    .contacts-link {
+        padding: 13px 20px;
+        font-size: 11px;
+    }
+}

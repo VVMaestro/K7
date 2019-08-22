@@ -20,12 +20,7 @@
 }
 
 @media (max-width: @medium-width) {
-    .swiper-pagination-custom {
-        font-size: 16px;
-    }
-
     .swiper-pagination-custom .swiper-pagination-current {
-        font-size: 23px;
         color: @main-dark;
     }
 
@@ -34,11 +29,21 @@
     }
 }
 
+@media (max-width: @mobile-width) {
+    .swiper-pagination-custom {
+        font-size: 16px;
+    }
+
+    .swiper-pagination-custom .swiper-pagination-current {
+        font-size: 23px;
+    }
+}
+
 .swiper-pagination__custom-wrapper {
     position: absolute;
 
     left: 30px;
-    bottom: 45px;
+    bottom: 70px;
 
     width: 270px;
     height: 50px;
@@ -62,16 +67,16 @@
     }
 }
 
-@media (max-width: @medium-width) {
+@media (max-width: @xmedium-width) {
     .swiper-pagination__custom-wrapper {
-        left: 15px;
-        width: 160px;
+        bottom: 20px;
     }
 }
 
-@media (max-width: @xmobile-width) {
+@media (max-width: @mobile-width) {
     .swiper-pagination__custom-wrapper {
-        bottom: 20px;
+        left: 15px;
+        width: 160px;
     }
 }
 
@@ -84,20 +89,20 @@
 
     width: auto;
 
-    font-size: 28px;
-    font-weight: 100;
+    font-size: 29px;
+    font-weight: 400;
     letter-spacing: -2px;
-    color: @main-dark;
+    color: @biruse;
 
     z-index: 2;
     transition: all 0.3s ease-in;
 }
 
-.swiper-pagination-custom__label--white {
-    color: #fff;
+.swiper-pagination-custom__label--dark {
+    color: @main-dark;
 }
 
-@media (max-width: @medium-width) {
+@media (max-width: @mobile-width) {
     .swiper-pagination-custom__label {
         bottom: 7px;
 
@@ -109,21 +114,21 @@
 .swiper-button-prev,
 .swiper-button-next {
     top: auto;
-    bottom: 45px;
+    bottom: 70px;
 
     width: 57px;
     height: 50px;
 
     background-size: 100%;
-    background-image: url('../img/arrows-dark.png');
+    background-image: url('../img/arrow-biruse.png');
 
-    z-index: 2;
+    z-index: 1;
     transition: all 0.3s ease-in;
 }
 
-.swiper-button-next--white,
-.swiper-button-prev--white {
-    background-image: url('../img/arrows.png');
+.swiper-button-next--dark,
+.swiper-button-prev--dark {
+    background-image: url('../img/arrows-dark.png');
 }
 
 .swiper-button-prev {
@@ -145,12 +150,20 @@
     }
 }
 
-.swiper-button-prev.swiper-button-disabled {
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
     visibility: hidden;
     opacity: 0;
 }
 
-@media (max-width: @medium-width) {
+@media (max-width: @xmedium-width) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        bottom: 20px;
+    }
+}
+
+@media (max-width: @mobile-width) {
     .swiper-button-prev,
     .swiper-button-next {
         width: 34px;

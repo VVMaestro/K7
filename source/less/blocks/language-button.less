@@ -4,7 +4,7 @@
 
     justify-content: space-between;
 
-    width: 125px;
+    width: 110px;
     height: auto;
 }
 
@@ -28,51 +28,21 @@
 .language-button {
     display: block;
 
-    width: 30px;
     height: 22px;
+
+    font-size: 17px;
+    text-decoration: none;
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 12px;
-}
 
-.language-button--unactive.language-button--ru {
-    &.language-button--dark {
-        background-image: url('../img/ru-unfill.png');
+    &--active {
+        color: @main-dark;
     }
 
-    &.language-button--light {
-        background-image: url('../img/ru-unfill-light.png');
-    }
-}
-
-.language-button--unactive.language-button--en {
-    &.language-button--dark {
-        background-image: url('../img/en-unfill.png');
-    }
-
-    &.language-button--light {
-        background-image: url('../img/en-unfill-light.png');
-    }
-}
-
-.language-button--active.language-button--ru {
-    &.language-button--dark {
-        background-image: url('../img/ru-fill.svg');
-    }
-
-    &.language-button--light {
-        background-image: url('../img/ru-fill-light.png');
-    }
-}
-
-.language-button--active.language-button--en {
-    &.language-button--dark {
-        background-image: url('../img/en-fill.svg');
-    }
-
-    &.language-button--light {
-        background-image: url('../img/en-fill-light.png');
+    &--unactive {
+        color: @biruse;
     }
 }
 
@@ -84,8 +54,8 @@
         left: calc(50% - 40px/2);
         bottom: -40px;
 
-        width: 40px;
-        height: 30px;
+        padding: 5px 10px;
+        width: 20px;
 
         border-radius: 3px;
         box-shadow: 0 0 4px 3px rgba(200, 200, 200, 0.800);
@@ -117,12 +87,6 @@
         }
     }
 
-    .language-button--unactive.language-button--en {
-        &.language-button--light {
-            background-image: url('../img/en-unfill.png');
-        }
-    }
-
     .language-button--unactive-open {
         visibility: visible;
         opacity: 1;
@@ -134,6 +98,6 @@
     }
 
     .language-button__wrapper {
-        width: 30px;
+        width: 20px;
     }
 }

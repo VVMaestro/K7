@@ -1,0 +1,33 @@
+.plus-button {
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background-color: #fff;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    &::before,
+    &::after {
+        content: '';
+
+        left: calc(50% - 22px/2);
+        top: calc(50% - 4px/2);
+
+        display: block;
+        position: absolute;
+
+        width: 22px;
+        height: 4px;
+
+        background-color: @black;
+    }
+
+    &::after {
+        transform: rotate(90deg);
+    }
+}

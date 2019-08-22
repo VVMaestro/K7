@@ -1,32 +1,28 @@
 .page__aside-panel {
     position: fixed;
 
-    left: 0;
+    left: -148px;
     top: 0;
     bottom: 0;
 
-    width: 175px;
+    width: 358px;
 
     background-color: @main-dark;
 
     z-index: 2;
 
-    transition-property: width;
+    transition-property: all;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 
     &--zero-w {
-        width: 0;
+        left: -358px;
     }
-}
-
-.page__aside-panel--big {
-    width: 406px;
 }
 
 @media (max-width: @medium-width) {
     .page__aside-panel {
-        width: 0;
+        left: -456px;
     }
 }
 
@@ -52,7 +48,7 @@
 
 .page__switch {
     position: absolute;
-    left: 30px;
+    left: 15px;
     top: 48px;
 }
 
@@ -100,123 +96,6 @@
     .social__wrapper {
         right: 10px;
     }
-}
-
-.page__contacts-link {
-    position: absolute;
-
-    bottom: 50px;
-    right: 115px;
-
-    font-size: 23px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: @main-dark;
-
-    cursor: pointer;
-
-    &--light {
-        color: #fff;
-    }
-}
-
-@media (max-width: @medium-width) {
-    .page__contacts-link {
-        right: 15px;
-        font-size: 16px;
-    }
-}
-
-.page__contacts {
-    display: none;
-    position: fixed;
-
-    right: 22%;
-    top: 170px;
-
-    width: 500px;
-
-    font-size: 37px;
-    font-weight: 400;
-    text-align: right;
-    letter-spacing: 2px;
-    color: @menu-color;
-
-    z-index: 3;
-}
-
-@media (max-width: @large-width) {
-    .page__contacts {
-        top: 250px;
-        right: calc(25% - 400px/2);
-
-        width: 400px;
-
-        font-size: 24px;
-    }
-}
-
-.page__contacts a {
-    display: inline-block;
-    position: relative;
-
-    color: @menu-color;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    &::before {
-        content: '';
-
-        display: block;
-        position: absolute;
-
-        bottom: 0;
-        left: 0;
-        right: 0;
-
-        height: 1px;
-
-        background-color: @menu-color;
-    }
-}
-
-.page__small-logo {
-    visibility: hidden;
-    position: absolute;
-
-    top: 48px;
-    left: 267px;
-
-    width: 255px;
-    height: 22px;
-
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url('../img/small-logotype-white.png');
-
-    opacity: 0;
-    z-index: 2;
-    transition: all 0.5s ease-out;
-}
-
-@media (max-width: @medium-width) {
-    .page__small-logo {
-        top: 25px;
-        left: 22%;
-        width: 225px;
-    }
-}
-
-@media (max-width: @xmobile-width) {
-    .page__small-logo {
-        top: 28px;
-        width: 160px;
-    }
-}
-
-.page__small-logo--show {
-    visibility: visible;
-    opacity: 1;
 }
 
 .page__language-button {

@@ -15,7 +15,7 @@ closePopup.addEventListener('click', function () {
 });
 
 //init contact-links
-const contactLinks = document.querySelectorAll('.page__contacts-link');
+const contactLinks = document.querySelectorAll('#js-to-contacts');
 const CONTACTS__INDEX = 2;
 
 contactLinks.forEach(function(it) {
@@ -32,10 +32,10 @@ textArea.addEventListener('wheel', function (evt) {
     evt.stopPropagation();
 });
 
-//init mobile contacts open logic
-const contactsOpenButton = document.querySelector('.mobile-contacts__button');
-const contactsBox = document.querySelector('.mobile-contacts');
+// //init mobile contacts open logic
+// const contactsOpenButton = document.querySelector('.mobile-contacts__button');
+// const contactsBox = document.querySelector('.mobile-contacts');
 
-contactsOpenButton.addEventListener('click', function () {
-    contactsBox.classList.toggle('mobile-contacts--open');
-});
+// contactsOpenButton.addEventListener('click', function () {
+//     contactsBox.classList.toggle('mobile-contacts--open');
+// });

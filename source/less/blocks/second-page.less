@@ -28,11 +28,11 @@
     visibility: hidden;
     position: absolute;
 
-    bottom: calc(50vh - 240px/2);
-    left: 195px;
+    bottom: calc(50vh - 300px/2);
+    left: 100px;
 
     width: 1120px;
-    height: 240px;
+    min-height: 300px;
 
     color: #fff;
 
@@ -50,8 +50,18 @@
 .second-page__title {
     margin: 0;
 
-    font-size: 180px;
-    letter-spacing: -2px;
+    font-size: 86px;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.second-page__std-list {
+    margin: 25px 0 40px 0;
+    padding-left: 140px;
+
+    @media (max-width: @medium-width) {
+        padding-left: 0;
+    }
 }
 
 @media (max-width: @large-width) {
@@ -70,7 +80,7 @@
 
 @media (max-width: @medium-width) {
     .second-page__intro {
-        left: calc(50% - 380px/2);
+        left: 15px;
         bottom: calc(50vh - 120px/2);
 
         width: 380px;
@@ -84,7 +94,7 @@
 
 @media (max-width: @xmobile-width) {
     .second-page__intro {
-        left: calc(50% - 240px/2);
+        left: 15px;
         bottom: calc(50vh - 100px/2);
 
         width: 240px;
@@ -93,57 +103,5 @@
 
     .second-page__title {
         font-size: 40px;
-    }
-}
-
-.second-page__more {
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    left: 15px;
-    bottom: 0;
-
-    width: 165px;
-    height: 45px;
-}
-
-.second-page__more span {
-    font-size: 24px;
-    font-weight: 400;
-    letter-spacing: -1px;
-}
-
-.second-page__plus-button {
-    position: relative;
-
-    width: 40px;
-    height: 40px;
-
-    border: none;
-    background-color: #fff;
-
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    &::before, &::after {
-        content: '';
-
-        left: calc(50% - 22px/2);
-        top: calc(50% - 4px/2);
-
-        display: block;
-        position: absolute;
-
-        width: 22px;
-        height: 4px;
-
-        background-color: @black;
-    }
-
-    &::after {
-        transform: rotate(90deg);
     }
 }

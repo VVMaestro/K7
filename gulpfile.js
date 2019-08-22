@@ -15,9 +15,9 @@ var paths = {
     build: './build'
   },
   html: {
-    source: './source/pages/*.html',
+    source: ['./source/pages/*.html', './source/pages/admin/*.html'],
     dest: './build',
-    watch: ['./source/pages/*.html', './source/blocks/**/*.html', './source/templates/*.html']
+    watch: ['./source/pages/*.html', './source/blocks/**/*.html', './source/templates/*.html', './source/pages/admin/*.html']
   },
   css: {
     source: ['./source/less/style.less', './source/css/plugins/**/*.css'],

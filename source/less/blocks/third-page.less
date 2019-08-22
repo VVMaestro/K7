@@ -11,9 +11,9 @@
     position: absolute;
 
     left: 22%;
-    top: 48px;
+    top: 11vh;
 
-    width: 280px;
+    width: 220px;
 }
 
 .third-page__logo img {
@@ -22,20 +22,7 @@
 
 @media (max-width: @xmedium-width) {
     .third-page__logo {
-        width: 210px;
-    }
-}
-
-@media (max-width: @medium-width) {
-    .third-page__logo {
-        top: 25px;
-    }
-}
-
-@media (max-width: @medium-width) {
-    .third-page__logo {
-        top: 28px;
-        width: 150px;
+        display: none;
     }
 }
 
@@ -43,7 +30,7 @@
     position: absolute;
 
     left: 22%;
-    top: 447px;
+    top: 50vh;
 }
 
 @media (max-width: @large-width) {
@@ -61,7 +48,7 @@
 .third-page__right-column {
     position: absolute;
 
-    top: 150px;
+    top: 100px;
     right: 9%;
 
     width: 40%;
@@ -69,16 +56,15 @@
 
 @media (max-width: @large-width) {
     .third-page__right-column {
-        top: 100px;
         width: 33%;
     }
 }
 
 @media (max-width: @xmedium-width) {
     .third-page__right-column {
-        top: 25%;
+        top: 15vh;
         right: auto;
-        left: 22%;
+        left: 30%;
 
         width: 65%;
     }
@@ -93,28 +79,12 @@
 
 @media (max-width: @mobile-width) {
     .third-page__right-column {
-        left: 15px;
-        width: 80%;
+        left: 0;
+
+        box-sizing: border-box;
+        padding: 0 40px;
+        width: 100%;
     }
-}
-
-.third-page__head {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-    margin-bottom: 10px;
-}
-
-@media (max-width: @xmedium-width) {
-    .third-page__head {
-        justify-content: space-between;
-    }
-}
-
-.third-page__head-left {
-    display: none;
-    order: 1;
 }
 
 @media (max-width: @xmedium-width) {
@@ -124,11 +94,11 @@
 }
 
 .third-page__head-right {
-    order: 2;
-}
+    margin-left: 100px;
 
-.third-page__mobile-contacts {
-    position: relative;
+    @media (max-width: @mobile-width) {
+        display: none;
+    }
 }
 
 .third-page__title {
@@ -138,23 +108,7 @@
 
     font-size: 40px;
     text-transform: uppercase;
-    text-align: right;
     line-height: 60px;
-
-    &::before {
-        content: '';
-
-        display: block;
-        position: absolute;
-
-        bottom: 0;
-        right: 0;
-
-        width: 65px;
-        height: 2px;
-
-        background-color: @main-dark;
-    }
 }
 
 @media (max-width: @large-width) {
@@ -188,7 +142,6 @@
 
     font-size: 16px;
     letter-spacing: -1px;
-    text-align: right;
 }
 
 @media (max-width: @xmedium-width) {
