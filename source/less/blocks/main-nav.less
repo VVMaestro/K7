@@ -1,8 +1,5 @@
 .main-nav {
-    top: 175px;
-    left: 170px;
-
-    margin-top: 29vh;
+    margin-top: 22vh;
     margin-left: 113px;
 
     opacity: 0;
@@ -15,9 +12,6 @@
 
 @media (max-width: @mobile-width) {
     .main-nav {
-        left: calc(50% - 220px/2);
-        top: 100px;
-
         width: 220px;
     }
 }
@@ -29,7 +23,7 @@
 }
 
 .main-nav__item {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .main-nav__item a {
@@ -70,7 +64,7 @@
 
 @media(max-width: @mobile-width) {
     .main-nav__item {
-        margin-bottom: 5px;
+        margin-bottom: 3px;
     }
     .main-nav__item a {
         font-size: 22px;
@@ -228,6 +222,7 @@
 
 .main-nav--open .page__aside-panel {
     left: 0;
+    background-image: url('../img/menu_back.png');
     z-index: 3;
 }
 
