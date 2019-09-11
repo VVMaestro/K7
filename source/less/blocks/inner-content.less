@@ -8,7 +8,7 @@
     }
 }
 
-.inner-content h2 {
+.inner-content__title {
     margin: 75px 0;
 
     color: @biruse;
@@ -20,25 +20,68 @@
     }
 }
 
-.inner-content h3 {
+.inner-content__main-pic {
+    width: 100%;
+}
+
+.inner-content__autor {
+    position: relative;
+
+    box-sizing: border-box;
+    margin: 75px 0 80px 0;
+    padding: 20px 128px 25px 185px;
+    min-height: 100px;
+
+    border-top: 3px solid @dark-orange;
+    background-color: @orange;
+
+    @media (max-width: @xmedium-width) {
+        padding: 5px 15px 5px 185px;
+    }
+}
+
+.inner-content__avatar {
+    position: absolute;
+
+    left: 40px;
+    bottom: -28px;
+
+    width: 110px;
+}
+
+.inner-content__autor-name {
+    font-weight: 400;
+    font-size: 22px;
+    color: #fff;
+    letter-spacing: 2px;
+
+    @media (max-width: @xmedium-width) {
+        font-size: 14px;
+    }
+}
+
+.inner-content__content h3 {
     margin: 45px 0;
     font-size: 28px;
     font-weight: 400;
+
     @media (max-width: @medium-width) {
         font-size: 22px;
     }
 }
 
-.inner-content p {
+.inner-content__content p,
+.inner-content__abstract {
     margin: 40px 0;
     font-size: 22px;
     font-weight: 100;
+
     @media (max-width: @medium-width) {
         font-size: 18px;
     }
 }
 
-.inner-content img {
+.inner-content__content img {
     margin: 75px 0;
     width: 100%;
 
