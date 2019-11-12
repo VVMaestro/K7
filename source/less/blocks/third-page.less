@@ -10,7 +10,7 @@
 .third-page__logo {
     position: absolute;
 
-    left: 22%;
+    left: 26%;
     top: 11vh;
 
     width: 220px;
@@ -29,15 +29,15 @@
 .third-page__contacts {
     position: absolute;
 
-    left: 22%;
-    top: 50vh;
-}
+    left: 26%;
+    top: 48vh;
 
-@media (max-width: @large-width) {
-    .third-page__contacts {
-        top: 410px;
+    @media (max-height: 720px) {
+        top: 58vh;
     }
 }
+
+
 
 @media (max-width: @xmedium-width) {
     .third-page__contacts {
@@ -48,10 +48,10 @@
 .third-page__right-column {
     position: absolute;
 
-    top: 100px;
-    right: 9%;
+    top: 20vh;
+    right: 6%;
 
-    width: 40%;
+    width: 45%;
 }
 
 @media (max-width: @large-width) {
@@ -93,22 +93,15 @@
     }
 }
 
-.third-page__head-right {
-    margin-left: 100px;
-
-    @media (max-width: @mobile-width) {
-        display: none;
-    }
-}
-
 .third-page__title {
     position: relative;
 
-    margin: 0 0 10px 0;
+    margin: 0 0 30px 0;
 
-    font-size: 40px;
-    text-transform: uppercase;
-    line-height: 60px;
+    font-size: 42px;
+    line-height: 50px;
+    color: @biruse;
+    text-align: center;
 }
 
 @media (max-width: @large-width) {
@@ -119,7 +112,6 @@
 
 @media (max-width: @xmedium-width) {
     .third-page__title {
-        margin: 0;
         font-size: 30px;
 
         &::before {

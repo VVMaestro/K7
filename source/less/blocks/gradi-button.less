@@ -1,0 +1,29 @@
+.gradi-button {
+    display: inline-block;
+
+    padding: 12px 42px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: inherit;
+    
+    border: none;
+    border-radius: 7px;
+    background-color: @biruse;
+    background-size: 120% 100%;
+    background-position: 100%;
+    background-origin: 0 0;
+    background-image: linear-gradient(to right, @biruse 20%, @blue 100%);
+    outline: none;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:focus {
+        background-position: 0;
+    }
+}

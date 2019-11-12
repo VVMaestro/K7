@@ -1,3 +1,11 @@
+.form {
+    text-align: right;
+
+    @media (max-width: @mobile-width) {
+        text-align: center;
+    }
+}
+
 .form__select {
     box-sizing: border-box;
     padding-right: 10%;
@@ -49,48 +57,72 @@
 .form__input {
     box-sizing: border-box;
     margin-bottom: 35px;
+    padding: 0 35px;
     width: 47%;
     height: 47px;
 
-    color: @main-dark;
+    color: @black;
     font-size: 17px;
     font-weight: 400;
-    font-family: 'Oswald',
+    font-family: 'Arial Narrow',
     Arial,
     sans-serif;
 
-    border: none;
-    border-bottom: 2px solid @main-dark;
+    border: 1px solid @grey;
+    border-radius: 8px;
     background-color: transparent;
-    background-position: 10px center;
-    background-repeat: no-repeat;
+    outline: none;
 
     &::-moz-placeholder {
-        color: @main-dark;
+        color: @dark-grey;
     }
     &::-webkit-input-placeholder {
-        color: @main-dark;
+        color: @dark-grey;
     }
     &::-ms-input-placeholder {
-        color: @main-dark;
+        color: @dark-grey;
     }
     &::placeholder {
-        color: @main-dark;
-    }
-
-    &--name { 
-        padding-left: 37px;
-        background-image: url('../img/man-user.png');
-    }
-
-    &--mail {
-        padding-left: 37px;
-        background-image: url('../img/arroba-sign.png');
+        color: @dark-grey;
     }
 
     &--phone {
-        padding-left: 37px;
-        background-image: url('../img/phone-silhouette.png');
+        margin-bottom: 0;
+        width: 100%;
+    }
+}
+
+.form__input-wrapper {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 35px;
+    width: 47%;
+
+    & .form__input {
+        display: block;
+        margin-bottom: 0;
+    }
+
+    @media (max-width: @mobile-width) {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+.form__input-note {
+    position: absolute;
+
+    top: calc(50% - 16px/2);
+    left: 105%;
+
+    width: fit-content;
+
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 400;
+
+    @media (max-width: @mobile-width) {
+        display: none;
     }
 }
 
@@ -122,32 +154,34 @@
     width: 100%;
     height: 120px;
 
-    color: @main-dark;
+    color: @black;
     font-size: 18px;
-    font-family: 'Oswald',
+    font-family: 'Arial Narrow',
     Arial,
     sans-serif;
     font-weight: 400;
 
-    border: 2px solid @main-dark;
+    border: 1px solid @grey;
+    border-radius: 8px;
     background-color: transparent;
+    outline: none;
     
     resize: none;
 
     &::-moz-placeholder {
-        color: @main-dark;
+        color: @dark-grey;
     }
 
     &::-webkit-input-placeholder {
-        color: @main-dark;
+        color: @dark-grey;
     }
 
     &::-ms-input-placeholder {
-        color: @main-dark;
+        color: @dark-grey;
     }
 
     &::placeholder {
-        color: @main-dark;
+        color: @dark-grey;
     }
 }
 
@@ -168,7 +202,7 @@
 
 @media (max-width: @mobile-width) {
     .form__textarea {
-        height: 80px;
+        height: 55px;
         font-size: 12px;
     }
 }
@@ -200,52 +234,6 @@
     color: @menu-color;
 }
 
-.form__submit {
-    display: block;
-
-    margin-top: 30px;
-    padding-top: 5px;
-
-    width: 195px;
-    height: 55px;
-
-    color: #fff;
-    font-size: 18px;
-    font-family: 'Oswald',
-    Arial,
-    sans-serif;
-    font-weight: 400;
-    text-transform: uppercase;
-
-    border: none;
-    border-radius: 2px;
-    background-color: @menu-color;
-
-    cursor: pointer;
-
-    &:hover, &:focus {
-        background-color: @orange;
-    }
-}
-
-@media (max-width: @large-width) {
-    .form__submit {
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: @medium-width) {
-    .form__submit {
-        width: 145px;
-        height: 45px;
-
-        font-size: 16px;
-    }
-}
-
-@media (max-width: @mobile-width) {
-    .form__submit {
-        margin-top: 5px;
-        font-size: 12px;
-    }
+.form__gradi-button {
+    margin-top: 15px;
 }

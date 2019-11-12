@@ -9,11 +9,13 @@
     width: auto;
 
     font-size: 29px;
+    font-weight: 100;
     color: @menu-color;
 }
 
 .swiper-pagination-custom .swiper-pagination-current {
     font-size: 46px;
+    font-weight: 700;
     color: #fff;
 
     transition: all 0.5s ease-out;
@@ -31,21 +33,21 @@
 
 @media (max-width: @mobile-width) {
     .swiper-pagination-custom {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .swiper-pagination-custom .swiper-pagination-current {
-        font-size: 23px;
+        font-size: 25px;
     }
 }
 
 .swiper-pagination__custom-wrapper {
     position: absolute;
 
-    left: 40px;
-    bottom: 40px;
+    left: 60px;
+    bottom: 75px;
 
-    width: 270px;
+    width: 245px;
     height: 50px;
 
     z-index: 2;
@@ -76,7 +78,7 @@
 @media (max-width: @mobile-width) {
     .swiper-pagination__custom-wrapper {
         left: 15px;
-        width: 160px;
+        width: 120px;
     }
 }
 
@@ -91,11 +93,14 @@
 
     font-size: 29px;
     font-weight: 400;
-    letter-spacing: -2px;
-    color: @biruse;
+    color: @violet;
 
     z-index: 2;
     transition: all 0.3s ease-in;
+
+    &--mobile {
+        display: none;
+    }
 }
 
 .swiper-pagination-custom__label--dark {
@@ -105,87 +110,121 @@
 @media (max-width: @mobile-width) {
     .swiper-pagination-custom__label {
         bottom: 7px;
-
-        letter-spacing: -1px;
         font-size: 19px;
+    }
+
+    .swiper-pagination-custom__label--desktop {
+        display: none;
+    }
+
+    .swiper-pagination-custom__label--mobile {
+        display: initial;
     }
 }
 
 .swiper-button-prev,
 .swiper-button-next {
     top: auto;
-    bottom: 40px;
+    left: 325px;
 
-    width: 57px;
-    height: 50px;
+    width: 40px;
+    height: 20px;
 
-    background-size: 100%;
-    background-image: url('../img/arrow.svg');
-
+    background-image: none;
     z-index: 1;
-    transition: all 0.3s ease-in;
-}
+    transition: all 0.2s ease-in;
+    outline: none;
 
-.swiper-button-next--dark,
-.swiper-button-prev--dark {
-    background-image: url('../img/arrows-dark.png');
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+    }
+
+    &::before {
+        left: 0;
+        right: 0;
+        top: calc(50% - 2px/2);
+
+        height: 2px;
+
+        background-color: @violet;
+    }
+
+    &:hover,
+    &:focus {
+        width: 45px;
+        transform: translateX(-2px);
+    }
+
+    &:hover::after,
+    &:focus::after {
+        border-color: @biruse;
+    }
+
+    &:hover::before,
+    &:focus::before {
+        background-color: @biruse;
+    }
 }
 
 .swiper-button-prev {
-    left: 325px;
+    bottom: 75px;
     visibility: visible;
     opacity: 1;
 
-    transition-property: visibility, opacity;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in;
-    transform: rotate(180deg) scale(0.75);
+    &::after {
+        left: 0;
+        top: calc(50% - 16px/2);
+
+        width: 14px;
+        height: 14px;
+
+        border-bottom: 2px solid @violet;
+        border-left: 2px solid @violet;
+
+        transform-origin: center;
+        transform: rotate(45deg);
+    }
 }
 
 .swiper-button-next {
-    left: 380px;
+    bottom: 95px;
 
-    &--on-start {
-        transform: translateX(-50px);
+    &::after {
+        right: 0;
+        top: calc(50% - 16px/2);
+
+        width: 14px;
+        height: 14px;
+
+        border-top: 2px solid @violet;
+        border-right: 2px solid @violet;
+
+        transform-origin: center;
+        transform: rotate(45deg);
     }
 }
 
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
-    visibility: hidden;
-    opacity: 0;
+    opacity: 0.4;
 }
 
 @media (max-width: @xmedium-width) {
-    .swiper-button-prev,
-    .swiper-button-next {
+    .swiper-button-prev {
         bottom: 20px;
+    }
+
+    .swiper-button-next {
+        bottom: 40px;
     }
 }
 
 @media (max-width: @mobile-width) {
     .swiper-button-prev,
     .swiper-button-next {
-        width: 34px;
-        height: 29px;
-    }
-
-    .swiper-button-prev {
-        left: 180px;
-    }
-
-    .swiper-button-next {
-        left: 215px;
-
-        &--on-start {
-            transform: translateX(-30px);
-        }
-    }
-}
-
-@media (max-width: @xmobile-width) {
-    .swiper-button-prev,
-    .swiper-button-next {
-        bottom: 20px;
+        display: none;
     }
 }

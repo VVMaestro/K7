@@ -16,12 +16,12 @@ closePopup.addEventListener('click', function () {
 
 //init contact-links
 const contactLinks = document.querySelectorAll('#js-to-contacts');
-const CONTACTS__INDEX = 2;
+const CONTACTS_INDEX = mainSwiper.slides.length;
 
 contactLinks.forEach(function(it) {
     it.addEventListener('click', function (evt) {
         evt.preventDefault();
-        mainSwiper.slideTo(CONTACTS__INDEX);
+        mainSwiper.slideTo(CONTACTS_INDEX);
     });
 });
 
@@ -31,11 +31,3 @@ const textArea = document.querySelector('.form__textarea');
 textArea.addEventListener('wheel', function (evt) {
     evt.stopPropagation();
 });
-
-// //init mobile contacts open logic
-// const contactsOpenButton = document.querySelector('.mobile-contacts__button');
-// const contactsBox = document.querySelector('.mobile-contacts');
-
-// contactsOpenButton.addEventListener('click', function () {
-//     contactsBox.classList.toggle('mobile-contacts--open');
-// });

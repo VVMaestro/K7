@@ -9,44 +9,21 @@
     &:not(:last-child) {
         margin-bottom: 40px;
     }
-    &--inst {
-        height: 20px;
-        width: 20px;
-        background-image: url('../img/instagram.png');
-    }
-    &--fb {
-        height: 22px;
-        width: 20px;
-        background-image: url('../img/facebook.png');
-    }
-    &--vk {
-        height: 22px;
-        width: 36px;
-        background-image: url('../img/vk.png');
-    }
-    &--bh {
-        height: 25px;
-        width: 36px;
-        background-image: url('../img/behance.png');
-    }
 }
 
-.social:hover {
-    &.social--inst {
-        background-image: url('../img/instagram2.png');
-    }
-    &.social--fb {
-        background-image: url('../img/facebook2.png');
-    }
-    &.social--vk {
-        background-image: url('../img/vk2.png');
-    }
-    &.social--bh {
-        background-image: url('../img/behance2.png');
-    }
+.social:hover .social__img {
+    fill: @light-blue;
 }
 
 .social__wrapper {
     width: auto;
     min-height: 225px;
-} 
+}
+
+.social__img {
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+    fill: @biruse;
+}
