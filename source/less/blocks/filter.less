@@ -16,10 +16,6 @@
     display: inline-block;
     margin-bottom: 25px;
 
-    &:first-child {
-        margin-left: 180px;
-    }
-
     &:not(:last-child) {
         margin-right: 15px;
     }
@@ -28,21 +24,23 @@
 .filter__item a {
     display: block;
 
-    padding: 5px 10px;
+    padding: 10px 20px;
 
     text-decoration: none;
-    color: @main-dark;
-    font-size: 23px;
+    text-transform: uppercase;
+    color: @light-blue;
+    font-size: 14px;
     line-height: 1;
 
-    border-radius: 2px;
-    border: 1px solid @active-word;
+    border-radius: 8px;
+    border: 2px solid @light-blue;
 
     transition: all 0.2s ease-in;
 
     &:hover,
     &:focus {
-        background-color: @active-word;
+        color: #fff;
+        background-color: @light-blue;
     }
 }
 
@@ -55,70 +53,6 @@
             margin-right: 5px;
         }
     }
-
-    .filter__item a {
-        font-size: 18px;
-    }
-}
-
-.filter__button {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    box-sizing: border-box;
-    padding: 5px 10px 5px 58px;
-
-    font-size: 23px;
-    line-height: 1;
-    
-    border: none;
-    border-radius: 2px;
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-image: url('../img/filter.png');
-    background-position: center left;
-    background-size: auto 100%;
-
-    cursor: pointer;
-
-    transition: all 0.2s ease-in;
-}
-
-@media (max-width: @mobile-width) {
-    .filter__button {
-        font-size: 18px;
-    }
-}
-
-.filter__form {
-    display: none;
-
-    margin-bottom: -30px;
-    padding: 5px 0;
-
-    font-size: 23px;
-    font-weight: 400;
-}
-
-.filter__checkbox {
-    display: inline-block;
-    margin-right: 30px;
-    margin-bottom: 20px;
-
-    &:first-child {
-        margin-left: 100px;
-    }
-}
-
-@media (max-width: @mobile-width) {
-    .filter__checkbox {
-
-        &:first-child {
-            margin-left: 60px;
-        }
-    }
 }
 
 .filter__wrapper {
@@ -128,28 +62,5 @@
 @media (max-width: @mobile-width) {
     .filter__wrapper {
         margin-bottom: 50px;
-    }
-}
-
-.filter__wrapper--active .filter__list {
-    display: none;
-}
-
-.filter__wrapper--active .filter__form {
-    display: block;
-}
-
-.filter__wrapper--active .filter__label {
-    display: none;
-}
-
-.filter__wrapper--active .filter__button {
-    padding-left: 38px;
-    height: 33px;
-}
-
-@media (max-width: @mobile-width) {
-    .filter__wrapper--active .filter__button {
-        height: 30px;
     }
 }

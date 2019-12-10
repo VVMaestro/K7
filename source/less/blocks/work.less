@@ -29,6 +29,8 @@
 
     text-decoration: none;
 
+    border-radius: 8px;
+
     &:nth-child(2n) {
         transform: translateY(@work-gap);
     }
@@ -67,7 +69,9 @@
     text-align: center;
     color: #fff;
 
-    background-color: @orange;
+    background-color: @biruse;
+    background-image: linear-gradient(to right, @biruse 20%, @blue 100%);
+    border-radius: 0 8px 0 8px;
 
     overflow: hidden;
 
@@ -131,6 +135,8 @@
 
         width: 100%;
         height: 100%;
+
+        border-radius: 8px 8px 8px 8px;
     }
 
     & .work__hover {
@@ -157,6 +163,7 @@
     height: 100%;
 
     background-color: @menu-color;
+    border-radius: 8px;
 
     overflow: hidden;
 }
