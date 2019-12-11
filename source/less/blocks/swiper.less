@@ -152,12 +152,6 @@
         background-color: @violet;
     }
 
-    &:hover,
-    &:focus {
-        width: 45px;
-        transform: translateX(-2px);
-    }
-
     &:hover::after,
     &:focus::after {
         border-color: @biruse;
@@ -173,6 +167,12 @@
     bottom: 75px;
     visibility: visible;
     opacity: 1;
+
+    &:hover,
+    &:focus {
+        width: 43px;
+        transform: translateX(-3px);
+    }
 
     &::after {
         left: 0;
@@ -191,6 +191,11 @@
 
 .swiper-button-next {
     bottom: 95px;
+
+    &:hover,
+    &:focus {
+        width: 45px;
+    }
 
     &::after {
         right: 0;
