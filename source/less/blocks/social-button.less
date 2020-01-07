@@ -1,39 +1,44 @@
 .social-button {
     display: inline-block;
+    position: relative;
 
-    padding: 5px 20px 5px 45px;
+    padding: 8px 20px 8px 38px;
 
     color: @main-dark;
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
 
-    border: 1px solid @active-word;
-    border-radius: 2px;
+    border: 2px solid @light-blue;
+    border-radius: 5px;
 
     background-repeat: no-repeat;
     background-position: 20px center;
 
-    &--fb {
-        background-image: url(../img/facebook-df.png);
+    &:hover,
+    &:focus {
+        color: @white;
 
-        &:hover {
+        .social-button__icon {
+            fill: @white;
+        }
+    }
+
+    &--fb {
+        &:hover,
+        &:focus {
             background-color: @fb-color;
         }
     }
     &--vk {
-        padding-left: 65px;
-        background-image: url(../img/vkontakte.png);
-
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: @vk-color;
         }
     }
     &--tw {
-        padding-left: 55px;
-        background-image: url(../img/twitter.png);
-
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: @tw-color;
         }
     }
@@ -41,6 +46,16 @@
     &:not(:last-child) {
         margin-right: 25px;
     }
+}
+
+.social-button__icon {
+    position: absolute;
+
+    top: calc(50% - 8px);
+    left: 10px;
+
+    height: 16px;
+    fill: @black;
 }
 
 .social-button__title {
@@ -51,4 +66,10 @@
 
 .social-button__wrapper {
     margin-bottom: 90px;
+}
+
+.social-button__intro {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 400;
 }

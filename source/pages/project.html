@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Страница проекта</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css"> 
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
 <body class="main-nav__container">
+    <include src='source/templates/sprite.html'></include>
     <include src='source/templates/header.html'></include>
-    
+
     <main>
         <section class="project__section">
             <div class="container">
@@ -25,32 +26,25 @@
                     <div class="project__col">
                         <h3 class="project__subtitle">История клиента</h3>
                         <p class="project__text">
-                            3310 занимается ремонтом и продажей техники в Новосибирске. 
-                            Сейчас наступило время изменений: компания меняет позиционирование, ценности, планы на дальнейшее развитие, поэтому нужен отличный дизайн. 
-                            Кстати, название для бренда придумали мы — это отсылка к известной неубиваемой модели Nokia, которая вызывает у большинства теплые воспоминания.
+                            Наш клиент занимается продажей недвижимости на Пхукете.
+                            Проекту нужен дизайн, который выделит его на фоне конкурентов и отразит дружелюбное позиционирование бизнеса.
                         </p>
                     </div>
                     <div class="project__col">
                         <h3 class="project__subtitle">Наша задача</h3>
                         <p class="project__text">
-                            3310 занимается ремонтом и продажей техники в Новосибирске. 
-                            Сейчас наступило время изменений: компания меняет позиционирование, ценности, планы на дальнейшее развитие, поэтому нужен отличный дизайн. 
-                            Кстати, название для бренда придумали мы — это отсылка к известной неубиваемой модели Nokia, которая вызывает у большинства теплые воспоминания.
+                            Разработать айдентику, которая будет вызывать доверие у взрослой аудитории.
                         </p>
                     </div>
                     <div class="project__col">
                         <h3 class="project__subtitle">Решение</h3>
                         <p class="project__text">
-                            3310 занимается ремонтом и продажей техники в Новосибирске. 
-                            Сейчас наступило время изменений: компания меняет позиционирование, ценности, планы на дальнейшее развитие, поэтому нужен отличный дизайн. 
-                            Кстати, название для бренда придумали мы — это отсылка к известной неубиваемой модели Nokia, которая вызывает у большинства теплые воспоминания.
+                            Минималистичный и яркий дизайн. Он отлично работает на сайте и вызывает позитивные эмоции.
                         </p>
                     </div>
                 </div>
                 <a class="project__arrow-button arrow-button js-lazy">
-                    <div class="arrow-button__circle">
-                        <span class="arrow-button__icon"></span>
-                    </div>
+                    <span class="arrow-button__icon"></span>
                     <span class="arrow-button__text">Перейти на сайт</span>
                 </a>
             </div>
@@ -62,9 +56,9 @@
                     <div class="details__intro js-lazy">
                         <h3 class="details__title">Логотип</h3>
                         <p class="details__text">
-                            В логотипе — телефон, он состоит из кусочков, а они собираются в единое целое
-                            около названия 3310. Это намек на то, что техника снова будет работать, как только попадет в
-                            компанию
+                            В знаке нет лишних деталей — он минималистичный и аккуратный.
+                            Логотип отражает название проекта: бирюзовое море и дом, залитый лучами солнца.
+                            Цвета и символы вызывают ощущение яркого Таиланда.
                         </p>
                     </div>
                     <ul class="details__list">
@@ -86,8 +80,8 @@
                     <div class="details__intro js-lazy">
                         <h3 class="details__title">Фирменные цвета</h3>
                         <p class="details__text">
-                            Чистые, свежие, технологичные оттенки, которые легко делают любой носитель
-                            фирменным.
+                            Фирменная палитра — отсылка к природным цветам и оттенкам.
+                            Все цвета натуральные, с их помощью легко оформить фирменные носители проекта.
                         </p>
                     </div>
                     <div class="details__picture js-lazy">
@@ -133,9 +127,9 @@
                             <div class="order-work__text">
                                 <h2 class="order-work__title">Нравятся наши работы?</h2>
                                 <span>Закажите услугу прямо сейчас!</span><br>
-                                <a href="#" class="order-work__link link link--biruse">Заполнить бриф</a>
+                                <a href="#" class="order-work__link link link--biruse">Перейти к услугам</a>
                             </div>
-                            <button href="#" class="button js-order-work">Заказать</button>
+                            <button href="#" class="gradi-button js-order-work">Заполнить бриф</button>
                         </div>
                     </div>
                     <div class="staff__second">
@@ -186,112 +180,34 @@
                     </div>
                 </div>
                 <div class="social-button__wrapper js-lazy">
-                    <a href="#" class="social-button social-button--fb">Поделиться</a>
-                    <a href="#" class="social-button social-button--vk">Репостнуть</a>
-                    <a href="#" class="social-button social-button--tw">Твитнуть</a>
+                    <div class="social-button__intro">
+                        Поделитесь материалом с друзьями и коллегами
+                    </div>
+                    <a href="#" class="social-button social-button--fb">
+                        <svg class="social-button__icon" width="20" height="24">
+                            <use xlink:href="#facebook_icon"></use>
+                        </svg>
+                        Поделиться
+                    </a>
+                    <a href="#" class="social-button social-button--vk">
+                        <svg class="social-button__icon" width="20" height="24">
+                            <use xlink:href="#vk_icon"></use>
+                        </svg>
+                        Репостнуть
+                    </a>
+                    <a href="#" class="social-button social-button--tw">
+                        <svg class="social-button__icon" width="20" height="24">
+                            <use xlink:href="#twitter_icon"></use>
+                        </svg>
+                        Твитнуть
+                    </a>
                 </div>
-            </div>
-        </section>
-        <section class="more-works__section">
-            <div class="container">
-                <h2 class="more-works__title js-lazy">Другие работы креативной студии</h2>
-                <ul class="more-works__list js-lazy">
-                    <li class="more-works__item">
-                        <a href="#">
-                            <div class="more-works__picture">
-                                <img src="img/prod-photo.png" alt="Другая работа">
-                            </div>
-                            <div class="more-works__desc">
-                                <h3 class="more-works__name">Название работы</h3>
-                                <span class="more-works__type">Разработка интернет магазина / Поддержка / Продвижение</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="more-works__item">
-                        <a href="#">
-                            <div class="more-works__picture">
-                                <img src="img/prod-photo.png" alt="Другая работа">
-                            </div>
-                            <div class="more-works__desc">
-                                <h3 class="more-works__name">Название работы</h3>
-                                <span class="more-works__type">Разработка интернет магазина / Поддержка / Продвижение</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="more-works__item">
-                        <a href="#">
-                            <div class="more-works__picture">
-                                <img src="img/prod-photo.png" alt="Другая работа">
-                            </div>
-                            <div class="more-works__desc">
-                                <h3 class="more-works__name">Название работы</h3>
-                                <span class="more-works__type">Разработка интернет магазина / Поддержка / Продвижение</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </section>
     </main>
 
     <include src='source/templates/footer.html'></include>
 
-    <section class="popup js-order-popup">
-        <button class="popup__close js-order-close"></button>
-        <h2 class="popup__title">Заказать услугу</h2>
-        <form class="popup__form js-order-form" action="" method="">
-            <input type="tel" class="popup__input" placeholder="Ваш телефон" required>
-            <input type="email" class="popup__input" placeholder="Ваш email" required>
-            <input type="text" class="popup__input" placeholder="Ваше имя" required>
-            <h3 class="popup__subtitle">Что заказываем</h3>
-            <div class="popup__wrapper">
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="comics">
-                    <span class="checkbox-custom"></span>
-                    <span>Нарисовать комикс</span>
-                </label>
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="logo">
-                    <span class="checkbox-custom"></span>
-                    Нарисовать логотип
-                </label>
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="animation">
-                    <span class="checkbox-custom"></span>
-                    Нарисовать анимацию
-                </label>
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="cartoon">
-                    <span class="checkbox-custom"></span>
-                    Нарисовать мультфильм
-                </label>
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="site">
-                    <span class="checkbox-custom"></span>
-                    Создать сайт
-                </label>
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="app">
-                    <span class="checkbox-custom"></span>
-                    Создать приложение
-                </label>
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="doodle">
-                    <span class="checkbox-custom"></span>
-                    Создать дудл видео
-                </label>
-                <label class="popup__checkbox">
-                    <input class="checkbox-custom__native visually-hidden" type="checkbox" name="order" value="smm">
-                    <span class="checkbox-custom"></span>
-                    SMM продвижение
-                </label>
-            </div>
-            <input type="submit" class="popup__button" value="Отправить">
-        </form>
-    </section>
-
     <script type="text/javascript" src="js/lazy-load.js"></script>
-    <script type="text/javascript" src="js/scrollTo.js"></script>
-    <script type="text/javascript" src="js/order-form.js"></script>
 </body>
 </html>
