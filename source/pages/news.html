@@ -8,26 +8,27 @@
 </head>
 <body class="main-nav__container">
     <include src='source/templates/header.html'></include>
-    
+    <include src='source/templates/sprite.html'></include>
+
     <main class="page__main">
 
         <div class="container">
+            <div class="main-title__wrapper main-title__wrapper--news">
+                <h1 class="main-title main-title--biruse">Когда пора обновить дизайн</h1>
+                <span class="main-title__date">
+                    <svg class="main-title__icon" width="12" height="12">
+                        <use xlink:href="#calendar_icon"></use>
+                    </svg>
+                    29 апреля 2019
+                </span>
+            </div>
             <section class="inner-content">
-                <h2 class="inner-content__title js-lazy">Когда пора обновить дизайн</h2>
                 <p class="inner-content__abstract js-lazy">
                     Начну с того, что менять дизайн необязательно: есть много примеров, когда бренды десятилетиями
                     живут со своими логотипами и остальным дизайном. Поэтому, если вас всё устраивает — не тратьте
                     лишних денег.
                 </p>
                 <img class="inner-content__main-pic js-lazy" src="img/cont-img1.png" alt="Смена дизайна">
-                <div class="inner-content__autor">
-                    <div class="inner-content__avatar">
-                        <img width="110" height="110" src="img/staff-photo.png" alt="Фотография автора">
-                    </div>
-                    <p class="inner-content__autor-name">
-                        Материал подготовил Виктор Петров, ведущий дизайнер
-                    </p>
-                </div>
                 <div class="inner-content__content">
                     <p class="js-lazy">
                         Но если вы уже задумывались о том, что хорошо бы что-то поменять — вот несколько ситуаций,
@@ -67,13 +68,42 @@
                     </p>
                 </div>
             </section>
-            <section class="inner-content__social-button">
-                    <h3 class="js-lazy social-button__title">Поделитесь материалом с друзьями и коллегами</h3>
-                    <div class="social-button__wrapper js-lazy">
-                        <a href="#" class="social-button social-button--fb">Поделиться</a>
-                        <a href="#" class="social-button social-button--vk">Репостнуть</a>
-                        <a href="#" class="social-button social-button--tw">Твитнуть</a>
+            <section class="js-lazy inner-content__autor">
+                <h2 class="inner-content__autor-title">Материал подготовил</h2>
+                <div class="inner-content__columns">
+                    <div class="inner-content__avatar">
+                        <img width="110" height="110" src="img/staff-photo.png" alt="Фотография автора">
                     </div>
+                    <div class="inner-content__autor-info">
+                        <span class="inner-content__autor-name">Виктор Петров</span>
+                        <span class="inner-content__autor-position">Ведущий дизайнер</span>
+                    </div>
+                </div>
+            </section>
+            <section class="inner-content__social-button">
+                <div class="social-button__wrapper js-lazy">
+                    <h2 class="social-button__intro">
+                        Поделитесь материалом с друзьями и коллегами
+                    </h2>
+                    <a href="#" class="social-button social-button--fb">
+                        <svg class="social-button__icon" width="20" height="24">
+                            <use xlink:href="#facebook_icon"></use>
+                        </svg>
+                        Поделиться
+                    </a>
+                    <a href="#" class="social-button social-button--vk">
+                        <svg class="social-button__icon" width="20" height="24">
+                            <use xlink:href="#vk_icon"></use>
+                        </svg>
+                        Репостнуть
+                    </a>
+                    <a href="#" class="social-button social-button--tw">
+                        <svg class="social-button__icon" width="20" height="24">
+                            <use xlink:href="#twitter_icon"></use>
+                        </svg>
+                        Твитнуть
+                    </a>
+                </div>
             </section>
         </div>
 

@@ -67,7 +67,7 @@
     width: 100%;
     height: 100%;
 
-    background-color: fade(@main-dark, 65%);
+    .main-gradient;
     opacity: 0;
 
     transition: all .3s ease;
@@ -75,7 +75,7 @@
 
 .more-works__item a:hover .more-works__desc {
     visibility: visible;
-    opacity: 1;
+    opacity: 0.9;
 }
 
 .more-works__name {
@@ -124,7 +124,6 @@
     display: block;
 
     left: calc(50% - @pic-width/2);
-    // left: 0;
     top: 0;
 
     max-width: unset;
