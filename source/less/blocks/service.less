@@ -2,15 +2,36 @@
     display: flex;
 
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .service__col {
-    &:not(:last-child) {
-        margin-right: 80px;
+    display: flex;
 
-        @media (max-width: @medium-width) {
-            margin-right: 20px;
+    & .service__pic {
+        margin-right: 60px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
+
+    &:nth-child(2n) {
+        flex-direction: row-reverse;
+        align-self: flex-end;
+
+        & .service__pic {
+            margin-right: 0;
+            margin-left: 60px;
+        }
+
+        & .service__wrapper {
+            text-align: end;
+        }
+
+        & .service__list {
+            padding: 0 95px 0 0;
         }
     }
 }
@@ -18,8 +39,11 @@
 .service__title {
     margin: 0 0 30px 0;
 
-    font-size: 36px;
-    font-weight: 400;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: @light-blue;
+    opacity: 0.1;
 
     @media (max-width: @medium-width) {
         font-size: 26px;
@@ -28,18 +52,18 @@
 
 .service__list {
     margin: 0;
-    padding: 0;
+    padding: 0 0 0 95px;
     list-style: none;
 }
 
 .service__item {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 700;
 
     @media (max-width: @medium-width) {
-        font-size: 19px;
+        font-size: 16px;
     }
 }
 
@@ -47,52 +71,44 @@
     display: inline-block;
     position: relative;
 
-    color: @biruse;
-    text-decoration: none;
+    color: @light-blue;
 
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-
-        bottom: -2px;
-        left: 0;
-        right: 0;
-
-        height: 1px;
-
-        background-color: @biruse;
+    &:hover,
+    &:focus {
+        color: @biruse;
     }
 }
 
 .service__item--with-window a {
-    color: @black;
+    color: @main-grey;
 
-    &::before {
-        background-color: @black;
+    &:hover,
+    &:focus {
+        color: fade(@main-grey, 80%);
     }
 }
 
 .service__pic {
-    width: 200px;
-    height: 160px;
+    width: 330px;
+    height: 300px;
 
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
 
-    &--lamp {
-        background-image: url('../img/handlamp.png');
+    &--inspire {
+        background-image: url('../img/back_inspire.png');
     }
 
-    &--gears {
-        background-image: url('../img/windowgear.png');
+    &--create {
+        background-image: url('../img/back_create.png');
     }
 
-    &--peoples {
-        background-image: url('../img/walkers.png');
+    &--animate {
+        background-image: url('../img/back_animate.png');
     }
 
-    &--tiles {
-        background-image: url('../img/tiles.png');
+    &--forward {
+        background-image: url('../img/back_forward.png');
     }
 }
